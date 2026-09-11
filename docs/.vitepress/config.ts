@@ -4,6 +4,7 @@ export default defineConfig({
   title: '衡元宙 · 锚点共生文明',
   description: '万灵衡锚本源宙 · 锚点共生文明官方设定文库 | Hengyuan Cosmos Official Lore Library',
   lang: 'zh-CN',
+  base: '/hengyuan-cosmos/',
   cleanUrls: true,
   lastUpdated: true,
 
