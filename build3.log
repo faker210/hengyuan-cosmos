@@ -1,0 +1,24 @@
+﻿
+> hengyuan-cosmos-docs@1.0.0 docs:build
+> vitepress build docs
+
+
+  [32m[1mvitepress[22m v1.6.4[39m
+
+npm : - building client + server bundles...
+所在位置 行:1 字符: 52
++ ... dministrator\Desktop\hengyuan-cosmos; npm run docs:build 2>&1 | Out-F ...
++                                           ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (- building client + server bundles...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-m
+anualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓[0m building client + server bundles...
+- rendering pages...
+[32m✓[0m rendering pages...
+build complete in 137.22s.

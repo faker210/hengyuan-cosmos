@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import fs from 'node:fs'
+import path from 'node:path'
 
 const languages = [
   { code: 'zh', label: '中文',     lang: 'zh-CN', navHome: '首页',     navGlossary: '术语表',   navConstitution: '宪章律法', navMultiverse: '诸天推演', navSandbox: '路线沙盘' },
@@ -18,6 +20,50 @@ const languages = [
   { code: 'de', label: 'Deutsch',  lang: 'de',    navHome: 'Startseite',navGlossary: 'Glossar',  navConstitution: 'Verfassung', navMultiverse: 'Multiversum', navSandbox: 'Sandkasten' },
 ]
 
+const groups: Array<{ min: number; max: number; title: string }> = [
+  { min: 0,  max: 9,  title: '总纲与核心设定' },
+  { min: 10, max: 19, title: '修炼体系' },
+  { min: 20, max: 29, title: '锚点与共生机制' },
+  { min: 30, max: 39, title: '文明分型与社会' },
+  { min: 40, max: 49, title: '律法与治理' },
+  { min: 50, max: 59, title: '万族与奇异存在' },
+  { min: 60, max: 69, title: '技术体系' },
+  { min: 70, max: 79, title: '纪元编年' },
+  { min: 80, max: 89, title: '位面与时间规则' },
+  { min: 90, max: 99, title: '索引与附录' },
+]
+
+function buildSidebar(lang: string) {
+  const dir = path.resolve('docs', lang)
+  if (!fs.existsSync(dir)) return []
+
+  const files = fs
+    .readdirSync(dir)
+    .filter((f) => /^\d{2}-.+\.md$/.test(f))
+    .sort()
+
+  return groups
+    .map((g) => {
+      const items = files
+        .filter((f) => {
+          const n = parseInt(f.slice(0, 2), 10)
+          return n >= g.min && n <= g.max
+        })
+        .map((f) => {
+          const name = f.replace(/\.md$/, '')
+          const text = name.replace(/^\d{2}-/, '')
+          return { text, link: `/${lang}/${name}/` }
+        })
+      if (!items.length) return null
+      return {
+        text: `${g.title}（${g.min.toString().padStart(2, '0')}–${g.max}）`,
+        collapsed: false,
+        items,
+      }
+    })
+    .filter(Boolean)
+}
+
 function buildLocale(lang: typeof languages[number]) {
   return {
     label: lang.label,
@@ -30,7 +76,7 @@ function buildLocale(lang: typeof languages[number]) {
         { text: lang.navMultiverse, link: '/multiverse/' },
         { text: lang.navSandbox, link: '/sandbox/' },
       ],
-      sidebar: 'auto',
+      sidebar: { [`/${lang.code}/`]: buildSidebar(lang.code) },
       outline: { label: '本页目录', level: [2, 3] },
       lastUpdatedText: '最后更新',
     },
@@ -49,12 +95,14 @@ const locales: Record<string, any> = {
         { text: '诸天推演', link: '/multiverse/' },
         { text: '路线沙盘', link: '/sandbox/' },
       ],
-      sidebar: 'auto',
+      sidebar: { '/zh/': buildSidebar('zh') },
     },
   },
 }
 
-languages.forEach(lang => { locales[lang.code] = buildLocale(lang) })
+languages.forEach((lang) => {
+  locales[lang.code] = buildLocale(lang)
+})
 
 export default defineConfig({
   title: '衡元宙 · 锚点共生文明',
