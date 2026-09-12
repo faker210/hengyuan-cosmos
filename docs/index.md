@@ -1,53 +1,75 @@
 ---
 layout: home
-
 hero:
-  name: "衡元宙"
-  text: "锚点共生文明 官方设定文库"
-  tagline: 万灵衡锚本源宙 · 万族共生 · 万法归锚 · 万界共和
-  image:
-    src: /logo.svg
-    alt: 衡元宙
+  name: 衡元宙
+  text: 锚点共生文明 · 15语种官方设定文库
+  tagline: 反掠夺 · 倡共生 —— 把命运与进化的选择权，交还给众生。
   actions:
     - theme: brand
-      text: 开始阅读
-      link: /core/00-衡元宙宇宙总览
+      text: 中文入口
+      link: /zh/
     - theme: alt
-      text: 文明对比沙盘
-      link: https://hengyuan-cosmos.github.io/sandbox/
-
+      text: English
+      link: /en/
+    - theme: alt
+      text: Français
+      link: /fr/
+    - theme: alt
+      text: Русский
+      link: /ru/
+    - theme: alt
+      text: हिन्दी
+      link: /hi/
+    - theme: alt
+      text: Español
+      link: /es/
+    - theme: alt
+      text: العربية
+      link: /ar/
+    - theme: alt
+      text: বাংলা
+      link: /bn/
+    - theme: alt
+      text: Português
+      link: /pt/
+    - theme: alt
+      text: Indonesia
+      link: /id/
+    - theme: alt
+      text: اردو
+      link: /ur/
+    - theme: alt
+      text: 日本語
+      link: /ja/
+    - theme: alt
+      text: Tiếng Việt
+      link: /vi/
+    - theme: alt
+      text: Kiswahili
+      link: /sw/
+    - theme: alt
+      text: Deutsch
+      link: /de/
 features:
-  - icon: 🔱
-    title: 总设定集
-    details: 宇宙本源、锚点机制、共生网络、文明分型——100篇核心设定完整覆盖
-    link: /core/00-衡元宙宇宙总览
-  - icon: ⚖️
-    title: 宪章律法
-    details: 共生宪法、劳动法、教育保障法、反垄断法——万族共和的法理基石
-    link: /constitution/03-共生文明宪章
-  - icon: 🧘
-    title: 三百套修炼体系
-    details: 推演迭代、生命循环、空间法理、能量转化——开放给众生的修炼大道
-    link: /cultivation/10-三百套本源修炼体系总览
-  - icon: 👥
-    title: 万族图鉴
-    details: 人族、异族、奇特生命、奇异能量、黑暗置换体——万族共生的完整谱系
-    link: /races/50-万族谱系总览
-  - icon: 🔧
-    title: 技术体系
-    details: 倍增果实工程化、空间法理、复制镜、隔离空间——共生文明的技术树
-    link: /technology/60-技术体系总览
+  - icon: 🌐
+    title: 15语种文库
+    details: 中、英、法、俄、印地、西、阿、孟、葡、印尼、乌尔都、日、越、斯瓦希里、德，每语种100篇完整译文。
   - icon: 📜
-    title: 编年史
-    details: 从前锚点时代到星际共生时代——衡元宙完整纪元划分与历史脉络
-    link: /history/70-纪元划分总表
+    title: 核心宪章
+    details: 锚点共生文明宣言、锚点本源定义与本质、共生文明宪章，配反掠夺主义核心论纲。
+  - icon: 🗂️
+    title: 三百套体系
+    details: 六大类三百套本源修炼体系全景索引：推演迭代、生命循环、空间法理调度、意识升维、共生网络、应用工程。
+  - icon: 🔍
+    title: 全文检索
+    details: 内置本地全文搜索，无需后端，秒级定位任意设定条目与法律条文。
 ---
 
-<style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #0ea5e9, #6366f1, #a855f7);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #0ea5e950, #6366f150);
-  --vp-home-hero-image-filter: blur(44px);
-}
-</style>
+<script setup>
+import { onMounted } from 'vue'
+import { useRouter } from 'vitepress'
+const router = useRouter()
+onMounted(() => { setTimeout(() => router.go('/zh/'), 1500) })
+</script>
+
+> 页面将在 1.5 秒后自动跳转到中文首页，或点击上方按钮选择您的语言。

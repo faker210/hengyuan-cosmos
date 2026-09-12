@@ -1,0 +1,104 @@
+# Perguntas Frequentes FAQ
+
+| Item | Conteúdo |
+|------|----------|
+| Número do documento | 96 |
+| Módulo | Apêndices e Materiais de Referência |
+| Palavras-chave principais | perguntas frequentes, FAQ, respostas a dúvidas, esclarecimento de configurações, guia de introdução |
+
+## 1. Descrição
+
+Este documento contém perguntas frequentes e respostas sobre o sistema de configuração da Civilização de Simbiose de Âncora, organizadas por tema. As perguntas abrangem vários aspectos, como os conceitos centrais da visão de mundo, o sistema de cultivo, as instituições sociais, o sistema jurídico, a interação entre planos e as regras temporais. O objetivo deste documento é fornecer um guia de introdução rápida para leitores que estão tendo contato pela primeira vez com as configurações da Civilização de Simbiose de Âncora, e ao mesmo tempo fornecer respostas autorizadas para dúvidas comuns para pesquisadores aprofundados. Este documento é um documento de atualização dinâmica; com o feedback dos leitores, novas perguntas e respostas serão continuamente adicionadas.
+
+## 2. Visão de Mundo e Conceitos Centrais
+
+**Q1: Qual é a reivindicação central da Civilização de Simbiose de Âncora?**
+A: A reivindicação central da Civilização de Simbiose de Âncora é "anti-saque, defesa da simbiose". Especificamente, opõe-se ao sistema de cultivo de tipo saque, que se baseia em devorar a energia, a sorte e até mesmo a origem dos fracos, e defende a evolução comum por meio da cooperação simbiótica. O conceito central da civilização é "devolver o direito de escolha do destino e da evolução a todos os seres", e a política básica é "mais trabalho, mais ganho; crescimento autônomo; todos têm um caminho; todas as raças progridem juntas".
+
+**Q2: O que significa o princípio "baseado na realidade"?**
+A: "Baseado na realidade" é uma das posições fundamentais da Civilização de Simbiose de Âncora, indicando que o mundo real é o único mundo verdadeiro, e o mundo do romance é um experimento mental falso. Na construção de configurações, as partes insuficientemente fictícias são complementadas com a realidade, e as coisas que não existem na realidade são atualizadas e criadas com base em leis objetivas. Este princípio garante a autoconsistência lógica e a perceptibilidade real do sistema de configurações, evitando o colapso das configurações causado pela pura imaginação.
+
+**Q3: Qual é a relação entre Hengyuanzhou e o universo?**
+A: O nome completo de Hengyuanzhou é "Wan Ling Heng Mao Ben Yuan Zhou", que é todo o universo habitado e governado pela Civilização de Simbiose de Âncora. Não é um único universo físico no sentido comum, mas sim um ser composto por quatro camadas: plano material, camada de energia, domínio da consciência e rede de leis. Pode ser entendido que Hengyuanzhou é um super sistema de universo que contém inúmeros planos e usa o mecanismo de âncora como meio de regulação central.
+
+## 3. Sistema de Cultivo
+
+**Q4: De onde vêm os trezentos conjuntos de sistemas de cultivo de origem?**
+A: Os trezentos conjuntos de sistemas não são métodos de cultivo inventados artificialmente, mas sim caminhos de cultivo ortodoxos extraídos diretamente das leis de origem do universo e verificados por âncoras. Durante o período de estabelecimento do sistema de simbiose, uma equipe liderada por "San Baishi" realizou a escavação e organização sistemática das leis do universo, e finalmente resumiu trezentos conjuntos de sistemas de cultivo que cobrem todas as dimensões da evolução. Esses sistemas são divididos em seis categorias: classe de dedução de origem, classe de ciclo de vida, classe de leis espaciais, classe de elevação dimensional da consciência, classe de rede simbiótica e classe de engenharia aplicada, com cinquenta conjuntos em cada categoria.
+
+**Q5: Por que os primeiros três conjuntos de sistemas são chamados de "três bases de origem"?**
+A: Os primeiros três conjuntos de sistemas — iteração de dedução (1º conjunto), ciclo de vida (2º conjunto) e gerenciamento de leis espaciais (3º conjunto) — são a base de cultivo de todos os outros sistemas. O sistema de iteração de dedução fornece a base de sabedoria e metodologia, o sistema de ciclo de vida fornece a base de energia vital, e o sistema de gerenciamento de leis espaciais fornece a base de operação espacial e de leis. Recomenda-se que os cultivadores de qualquer outro sistema pratiquem pelo menos um dos três conjuntos de bases de origem primeiro, para estabelecer uma base evolutiva sólida.
+
+**Q6: O que é a fruta Bei Zeng? Qual é sua relação com One Piece?**
+A: A fruta Bei Zeng é um dos "buffs iniciais" da Civilização de Simbiose de Âncora, originada da configuração da fruta Bei Zeng no mundo de One Piece. Em Hengyuanzhou, a fruta Bei Zeng é aplicada tecnologicamente, capaz de aumentar a capacidade de dedução dos cultivadores em cem vezes, sendo uma ferramenta auxiliar central do sistema de iteração de dedução. Esta configuração reflete o princípio de "complementar o fictício insuficiente com a realidade, atualizar e criar o que não existe na realidade com base nas leis" — incorporar configurações interessantes de obras fictícias no sistema tecnológico da civilização simbiótica após a transformação legal.
+
+**Q7: O que é a estratégia de ativação de 20%? Por que 20%?**
+A: A estratégia de ativação de 20% é o objetivo estratégico faseado da Civilização de Simbiose de Âncora, visando ativar 20% de todos os seres do universo inteiro como os mais fortes do plano na fase inicial. A escolha da proporção de 20% baseia-se na análise da dinâmica da rede simbiótica — quando 20% dos nós em uma rede atingem um estado de alta energia, o efeito de ressonância geral da rede aciona um ponto crítico, impulsionando a evolução acelerada dos 80% restantes dos nós. Esses 20% dos mais fortes do plano atuarão como força de espinha dorsal, desempenhando um papel central na manutenção de âncoras, orientação de mentores e construção da civilização.
+
+## 4. Instituições Sociais e Direito
+
+**Q8: Quais são os cinco tipos de classificação da civilização simbiótica?**
+A: Os cinco tipos de classificação da civilização simbiótica são cinco tipos de sociedades simbióticas divididos com base nas características das civilizações do mundo real, incluindo: tipo intensivo da Ásia Oriental (caracterizado por organização eficiente e coletivismo), tipo de bem-estar nórdico (caracterizado por alto bem-estar e igualdade social), tipo plural da América do Norte (caracterizado por multiculturalismo e vitalidade inovadora), tipo social da Europa continental (caracterizado por economia de mercado social e participação trabalhista) e tipo de recuperação em desenvolvimento (caracterizado por desenvolvimento rápido e vantagem tardia). Esses cinco tipos de classificação não são classificações mutuamente exclusivas, mas sim modelos de referência que podem aprender uns com os outros e se desenvolver de forma integrada.
+
+**Q9: Como funciona o mecanismo de contrato de produção conjunta?**
+A: O mecanismo de contrato de produção conjunta é o sistema central de alocação de recursos da Civilização de Simbiose de Âncora, inspirado no sistema real de responsabilidade contratual de produção conjunta familiar. Seu modo de operação é: alocar os recursos de cultivo do universo para indivíduos ou grupos por meio de "contrato", e os contratantes obtêm o direito de uso e o direito de benefício dos recursos por meio de trabalho e contribuição. Mais trabalho, mais ganho; quanto maior a contribuição, mais recursos são obtidos. Este mecanismo não apenas garante a alocação justa de recursos, mas também estimula o entusiasmo pelo trabalho dos indivíduos, realizando a unidade de justiça e eficiência.
+
+**Q10: Qual é a relação entre a Constituição da Simbiose e as leis comuns?**
+A: A Constituição da Simbiose é a lei fundamental da Civilização de Simbiose de Âncora, com a mais alta eficácia jurídica. Todas as leis, regulamentos administrativos e regulamentos locais não podem entrar em conflito com a Constituição. A Lei do Trabalho da Simbiose, a Lei de Proteção ao Consumidor e as cinco leis complementares de educação, saúde, moradia, meio ambiente e antitruste são todas leis setoriais formuladas com base na Constituição da Simbiose, responsáveis por concretizar e operacionalizar as disposições principiológicas da Constituição. O Tribunal da Simbiose tem o direito de realizar revisão de inconstitucionalidade sobre leis que violem a Constituição e declará-las inválidas.
+
+## 5. Interação Entre Planos
+
+**Q11: O que é o plano arqueológico de "espelho de cópia + espaço isolado + apenas retorno de conhecimento"?**
+A: Este é o plano padrão para arqueologia entre planos e retrocesso temporal da Civilização de Simbiose de Âncora, composto por três elementos centrais:
+1. **Espelho de cópia**: realizar uma cópia completa 1:1 do alvo arqueológico sem entrar em contato com o objeto original, e o processo de cópia não altera nenhum estado do objeto original.
+2. **Espaço isolado**: a cópia é gerada em um espaço independente completamente isolado do alvo, e os arqueólogos realizam todas as operações de pesquisa dentro do espaço isolado.
+3. **Apenas retorno de conhecimento**: após a arqueologia, apenas conhecimento e informações abstratas podem ser retornados; a matéria e a energia da cópia devem ser destruídas dentro do espaço isolado, e não podem ser trazidas de volta ao próprio plano.
+Este plano garante zero interferência do processo arqueológico no plano alvo ou no período alvo, e ao mesmo tempo evita a poluição entre planos.
+
+**Q12: Por que devemos seguir o princípio de "primeiro observar, depois intervir limitadamente"?**
+A: O conceito central deste princípio é a "humildade cognitiva" — mesmo os mais fortes do plano não podem dominar completamente todas as conexões causais de um nó temporal ou de uma civilização de plano. Qualquer intervenção direta no passado ou em outro plano pode desencadear reações em cadeia causais imprevisíveis. Portanto, deve-se primeiro realizar uma observação abrangente com a atitude mais cautelosa, e somente sob a premissa de dados de observação suficientes e avaliação de risco clara é permitida a intervenção limitada com escopo e grau estritamente limitados. Este princípio é a garantia fundamental para a segurança das operações de retrocesso temporal e entre planos.
+
+**Q13: Quais condições são necessárias para a viagem entre planos?**
+A: A viagem entre planos requer o cumprimento das seguintes condições: em primeiro lugar, o viajante deve ter cultivo acima do terceiro estágio (Hua Kong Jing) do sistema de gerenciamento de leis espaciais, ou transportar um veículo de viagem que atenda aos padrões; em segundo lugar, deve obter a permissão de viagem do nível correspondente emitida pela Agência de Gerenciamento de Planos (nível A de observação arqueológica, nível B de intercâmbio acadêmico, nível C de cooperação de recursos, nível D de intervenção de emergência); em terceiro lugar, tanto o ponto de partida quanto o ponto de chegada da viagem devem ter âncoras para calibração de coordenadas; em quarto lugar, deve concluir o procedimento de purificação de três níveis (purificação biológica, purificação de energia, purificação de consciência); em quinto lugar, a energia da viagem deve ser transportada por si mesmo, sendo proibido extraí-la do plano alvo.
+
+## 6. Regras Temporais
+
+**Q14: Qual é a diferença entre retrocesso temporal e viagem no tempo?**
+A: Na configuração de Hengyuanzhou, o retrocesso temporal não é igual à viagem no tempo. O retrocessor temporal não entra no passado em forma material completa, mas chega ao nó temporal alvo na forma de projeção de consciência ou pacote de informações. A existência do retrocessor no período passado é "semi-transparente" — pode observar, mas a capacidade de interação física é estritamente limitada. Este design em si é parte do mecanismo de segurança do retrocesso temporal, reduzindo a possibilidade de interferência física do retrocessor no passado.
+
+**Q15: Quais tipos de paradoxos temporais existem? Como preveni-los?**
+A: Os paradoxos temporais são divididos em quatro categorias principais: paradoxo do avô (o comportamento do retrocessor faz com que as condições causais de sua própria existência sejam eliminadas), paradoxo da informação (a informação retornada do futuro para o passado forma um ciclo de informação sem fonte), paradoxo ontológico (a interação do retrocessor com seu eu passado causa confusão da consciência ontológica) e paradoxo do evento (o retrocessor altera eventos históricos importantes, causando a reconstrução da cadeia causal). Os mecanismos de prevenção incluem: avaliação causal pré-retrocesso e isolamento causal do retrocessor antes do evento, sistema de lista branca de comportamentos de intervenção, monitoramento causal em tempo real e resposta de emergência de três níveis durante o evento, reparo causal e auditoria após o evento. O objetivo de todo o sistema de prevenção é eliminar o paradoxo em seu estado embrionário.
+
+## 7. Vida e Raças
+
+**Q16: O que são vida estranha e energia estranha?**
+A: Vida estranha refere-se a formas de vida com formas de existência especiais que não se enquadram na definição convencional de vida, como vida de energia pura, vida de forma de consciência, vida mecânica, etc. Energia estranha refere-se a formas de energia com atributos e padrões de comportamento especiais que não se enquadram na classificação convencional de energia, como energia de leis, energia de consciência, energia causal, etc. Para esses dois tipos de seres especiais, a Civilização de Simbiose de Âncora estabeleceu três tipos de procedimentos padronizados de tratamento (identificação e classificação, avaliação e controle, fusão e simbiose), garantindo que sejam gerenciados adequadamente e utilizados razoavelmente dentro da estrutura da civilização simbiótica.
+
+**Q17: O que é o corpo de substituição das trevas? O que é a ética da alma dupla?**
+A: O corpo de substituição das trevas é uma forma de vida especial, na qual existem duas almas simultaneamente no corpo — geralmente a alma original e uma alma "de substituição" estrangeira. Este estado causa problemas éticos complexos: ambas as almas têm seus próprios direitos e personalidades, e não se pode simplesmente eliminar uma delas. O núcleo do código ético da alma dupla é respeitar os direitos respectivos das duas almas, proibindo a fusão forçada ou a eliminação unilateral. De acordo com as circunstâncias específicas, o corpo de substituição das trevas é dividido em quatro ramos, cada um adotando diferentes planos de tratamento: tipo de coexistência (as duas almas coexistem harmoniosamente), tipo alternado (as duas almas controlam o corpo alternadamente), tipo de separação (as duas almas são separadas em diferentes veículos por meios técnicos) e tipo de fusão (fusão profunda em uma nova alma com base na vontade de ambas as partes).
+
+## 8. Metodologia de Configuração
+
+**Q18: Qual é a diferença entre este sistema de configuração e as configurações comuns de romances da web?**
+A: A maior diferença do sistema de configuração da Civilização de Simbiose de Âncora está em sua posição central de "anti-saque". As configurações comuns de romances da web geralmente giram em torno do crescimento pessoal e do aumento de poder do protagonista, e o sistema de cultivo é essencialmente de tipo saque — o protagonista se torna forte devorando, lutando e tomando recursos. Por outro lado, a Civilização de Simbiose de Âncora opõe-se fundamentalmente a esse modelo, defendendo a evolução comum de todas as raças por meio da cooperação simbiótica. Além disso, este sistema de configuração enfatiza "baseado na realidade", e todas as configurações se esforçam para serem logicamente autoconsistentes e em conformidade com leis objetivas, evitando a pura imaginação e o colapso das configurações.
+
+**Q19: O que é especificamente o caminho de elevação dimensional de quatro estágios?**
+A: O caminho de elevação dimensional de quatro estágios é a rota estratégica para a elevação dimensional geral do universo de Hengyuanzhou:
+1. **Fundação real**: estabelecer o sistema social simbiótico no plano material, eliminar a raiz do saque, concluir a construção da base institucional da civilização.
+2. **Empoderamento tecnológico**: combinar as leis de cultivo com a engenharia tecnológica, reduzir o limiar de evolução, realizar um salto na produtividade.
+3. **Evolução da consciência**: promover a migração das formas de vida para o domínio da consciência, realizar simbiose e sublimação no nível espiritual.
+4. **Simbiose interestelar**: estabelecer uma rede de âncoras completa entre planos e entre estrelas, concluir a elevação dimensional geral do universo.
+Atualmente, Hengyuanzhou está em um período crítico de transição do primeiro para o segundo estágio.
+
+**Q20: Como participar da expansão deste sistema de configuração?**
+A: O sistema de configuração da Civilização de Simbiose de Âncora é um sistema aberto e em constante expansão. Qualquer pessoa pode realizar criações de expansão com base na estrutura de configurações existente, incluindo, mas não se limitando a: detalhar os métodos específicos de um determinado sistema de cultivo, criar a cultura e a história de uma determinada raça, projetar a forma de civilização de um determinado plano, escrever eventos detalhados de um determinado período histórico, desenvolver novas tecnologias e cenários de aplicação. As configurações de expansão devem seguir o princípio de "baseado na realidade, atualização de acordo com as leis", garantindo a autoconsistência lógica com as configurações existentes. Configurações de expansão excelentes podem ser incorporadas ao sistema de configurações formal após revisão.
+
+## Conclusão
+
+O FAQ de perguntas frequentes é a entrada rápida para o mundo das configurações da Civilização de Simbiose de Âncora. Por meio dessas vinte perguntas e respostas, os leitores podem compreender rapidamente os conceitos centrais, os mecanismos-chave e a estrutura básica do sistema de configurações. Naturalmente, o FAQ não pode cobrir todos os detalhes do sistema de configurações, e a compreensão aprofundada ainda requer a leitura dos documentos especiais de cada módulo. Com o enriquecimento contínuo do sistema de configurações, este FAQ também será continuamente atualizado, servindo sempre como uma referência confiável para a introdução e o esclarecimento de dúvidas dos leitores.
+
+## Documentos Relacionados
+
+- 00-Visão Geral do Universo de Hengyuanzhou
+- 90-Dicionário de Termos
+- 98-Lista de Sugestões para Expansão de Configurações
