@@ -60,7 +60,7 @@ function buildSidebar() {
       .map((f) => {
         const name = f.replace(/\.md$/, '')
         const text = name.replace(/^\d{2}-/, '')
-        return { text, link: `/zh/${name}/` }
+        return { text, link: `/zh/${name}.html` }
       })
     if (!items.length) continue
     groups.push({
@@ -79,7 +79,7 @@ function buildSidebar() {
     groups.push({
       text: `${g.title}（${g.min}–${g.max}）`,
       collapsed: true,
-      items: [{ text: `共 ${count} 篇 · 打开模块索引 →`, link: `/zh/${g.index}/` }],
+      items: [{ text: `共 ${count} 篇 · 打开模块索引 →`, link: `/zh/${g.index}.html` }],
     })
   }
 
@@ -88,7 +88,7 @@ function buildSidebar() {
 
 const zhNav = [
   { text: '首页', link: '/zh/' },
-  { text: '术语表', link: '/glossary' },
+  { text: '术语表', link: '/glossary.html' },
   { text: '宪章律法', link: '/constitution/' },
   { text: '诸天推演', link: '/multiverse/' },
   { text: '路线沙盘', link: '/sandbox/' },
@@ -102,7 +102,7 @@ export default defineConfig({
   title: '衡元宙 · 锚点共生文明',
   description: '万灵衡锚本源宙 · 锚点共生文明官方设定文库 | Hengyuan Cosmos Official Lore Library',
   base: '/hengyuan-cosmos/',
-  cleanUrls: true,
+  cleanUrls: false,
   lastUpdated: false,
   ignoreDeadLinks: true,
   head: [
