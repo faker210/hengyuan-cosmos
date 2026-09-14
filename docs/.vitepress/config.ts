@@ -46,7 +46,7 @@ function buildSidebar() {
 
   const files = fs
     .readdirSync(dir)
-    .filter((f) => /^(\d{2}-|\d{3,}_).+\.md$/.test(f))
+    .filter((f) => /^(\d{4}-|\d{4}_).+\.md$/.test(f))
     .sort()
 
   const groups: any[] = []
@@ -59,12 +59,12 @@ function buildSidebar() {
       })
       .map((f) => {
         const name = f.replace(/\.md$/, '')
-        const text = name.replace(/^\d{2}-/, '')
+        const text = name.replace(/^\d{4}[_-]/, '')
         return { text, link: `/zh/${name}.html` }
       })
     if (!items.length) continue
     groups.push({
-      text: `${g.title}（${g.min.toString().padStart(2, '0')}–${g.max}）`,
+      text: `${g.title}（${g.min.toString().padStart(4, '0')}–${g.max}）`,
       collapsed: false,
       items,
     })
