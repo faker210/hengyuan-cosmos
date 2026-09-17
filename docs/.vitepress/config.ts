@@ -41,8 +41,8 @@ const zhModuleGroups: Array<{ min: number; max: number; title: string; index: st
   { min: 901, max: 1000, title: '文明终极定型典藏', index: '模块五-文明终极定型典藏索引' },
 ]
 
-// ── 英文分组 ──────────────────────────────────────────
-const enBaseGroups: Array<{ min: number; max: number; title: string }> = [
+// ── 非中文通用分组（英文标题，适用于 en 及其他 13 语种）──
+const intlBaseGroups: Array<{ min: number; max: number; title: string }> = [
   { min: 0,  max: 9,  title: 'General Principles & Core Settings' },
   { min: 10, max: 19, title: 'Cultivation Systems' },
   { min: 20, max: 29, title: 'Anchor & Symbiosis Mechanisms' },
@@ -55,7 +55,7 @@ const enBaseGroups: Array<{ min: number; max: number; title: string }> = [
   { min: 90, max: 99, title: 'Index & Appendix' },
 ]
 
-const enModuleGroups: Array<{ min: number; max: number; title: string; index: string }> = [
+const intlModuleGroups: Array<{ min: number; max: number; title: string; index: string }> = [
   { min: 100, max: 250, title: 'Deep Realm Refinement', index: '模块一-境界深度细化索引' },
   { min: 251, max: 500, title: 'Cross-Universe Classic Critique', index: '模块二-诸天名著对标批判索引' },
   { min: 501, max: 700, title: 'Dual-Track Time Domain Civilization', index: '模块三-双轨时间域文明体验索引' },
@@ -63,13 +63,14 @@ const enModuleGroups: Array<{ min: number; max: number; title: string; index: st
   { min: 901, max: 1000, title: 'Ultimate Civilization Compendium', index: '模块五-文明终极定型典藏索引' },
 ]
 
-// ── 侧边栏构建（支持多语言）────────────────────────────
-function buildSidebar(lang: 'zh' | 'en' = 'zh') {
+// ── 侧边栏构建（支持全部语种，自动扫描 docs/<lang>/ 目录）──
+function buildSidebar(lang: string) {
   const dir = path.resolve('docs', lang)
   if (!fs.existsSync(dir)) return []
 
-  const baseGroups = lang === 'en' ? enBaseGroups : zhBaseGroups
-  const moduleGroups = lang === 'en' ? enModuleGroups : zhModuleGroups
+  const isZh = lang === 'zh'
+  const baseGroups = isZh ? zhBaseGroups : intlBaseGroups
+  const moduleGroups = isZh ? zhModuleGroups : intlModuleGroups
 
   const files = fs
     .readdirSync(dir)
@@ -78,6 +79,7 @@ function buildSidebar(lang: 'zh' | 'en' = 'zh') {
 
   const groups: any[] = []
 
+  // 基础篇 0–99：展开为文档列表
   for (const g of baseGroups) {
     const items = files
       .filter((f) => {
@@ -91,28 +93,28 @@ function buildSidebar(lang: 'zh' | 'en' = 'zh') {
       })
     if (!items.length) continue
     groups.push({
-      text: lang === 'en'
-        ? `${g.title} (${g.min.toString().padStart(4, '0')}–${g.max.toString().padStart(4, '0')})`
-        : `${g.title}（${g.min.toString().padStart(4, '0')}–${g.max}）`,
+      text: isZh
+        ? `${g.title}（${g.min.toString().padStart(4, '0')}–${g.max}）`
+        : `${g.title} (${g.min.toString().padStart(4, '0')}–${g.max.toString().padStart(4, '0')})`,
       collapsed: false,
       items,
     })
   }
 
+  // 模块篇 100–1000：折叠为模块索引入口（非中文即使文档少也显示入口）
   for (const g of moduleGroups) {
     const count = files.filter((f) => {
       const n = parseInt(f.match(/^\d+/)[0], 10)
       return n >= g.min && n <= g.max
     }).length
-    // 英文侧边栏：即使模块文档未全部导入，也显示模块索引入口（占位页已存在）
-    if (!count && lang === 'zh') continue
-    const label = lang === 'en'
-      ? `${count > 0 ? count + ' translated · ' : ''}Open module index →`
-      : `共 ${count} 篇 · 打开模块索引 →`
+    if (!count && isZh) continue
+    const label = isZh
+      ? `共 ${count} 篇 · 打开模块索引 →`
+      : `${count > 0 ? count + ' translated · ' : ''}Open module index →`
     groups.push({
-      text: lang === 'en'
-        ? `${g.title} (${g.min}–${g.max})`
-        : `${g.title}（${g.min}–${g.max}）`,
+      text: isZh
+        ? `${g.title}（${g.min}–${g.max}）`
+        : `${g.title} (${g.min}–${g.max})`,
       collapsed: true,
       items: [{ text: label, link: `/${lang}/${g.index}.html` }],
     })
@@ -134,17 +136,78 @@ const zhNav = [
   },
 ]
 
-const enNav = [
-  { text: 'Home', link: '/en/' },
-  { text: 'Glossary', link: '/glossary.html' },
-  { text: 'Constitution', link: '/constitution/' },
-  { text: 'Multiverse', link: '/multiverse/' },
-  { text: 'Sandbox', link: '/sandbox/' },
-  {
-    text: '🌐 Language',
-    items: languages.map((l) => ({ text: l.label, link: `/${l.code}/` })),
-  },
-]
+// ── 为指定语种生成导航菜单 ────────────────────────────
+function buildNav(lang: string) {
+  const isZh = lang === 'zh'
+  const homeLink = isZh ? '/zh/' : `/${lang}/`
+  return [
+    { text: isZh ? '首页' : 'Home', link: homeLink },
+    { text: isZh ? '术语表' : 'Glossary', link: '/glossary.html' },
+    { text: isZh ? '宪章律法' : 'Constitution', link: '/constitution/' },
+    { text: isZh ? '诸天推演' : 'Multiverse', link: '/multiverse/' },
+    { text: isZh ? '路线沙盘' : 'Sandbox', link: '/sandbox/' },
+    {
+      text: isZh ? '🌐 语言' : '🌐 Language',
+      items: languages.map((l) => ({ text: l.label, link: `/${l.code}/` })),
+    },
+  ]
+}
+
+// ── 非中文通用 footer ─────────────────────────────────
+const intlFooter = {
+  message: 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Anchor Symbiosis Civilization · Myriad Races Republic',
+  copyright: 'Copyright © 2026 Heng Yuan Zhou Lore Team',
+}
+
+// ── 非中文通用 UI 文本 ────────────────────────────────
+const intlUiLabels = {
+  docFooter: { prev: 'Previous page', next: 'Next page' },
+  outline: { label: 'On this page' },
+  lastUpdatedText: 'Last updated',
+  returnToTopLabel: 'Return to top',
+  sidebarMenuLabel: 'Menu',
+  darkModeSwitchLabel: 'Appearance',
+}
+
+// ── 动态生成全部语种的 locale 配置 ─────────────────────
+function buildLocales() {
+  const locales: any = {
+    root: {
+      label: '中文',
+      lang: 'zh-CN',
+      themeConfig: {
+        nav: buildNav('zh'),
+        sidebar: { '/zh/': buildSidebar('zh') },
+      },
+    },
+    zh: {
+      label: '中文',
+      lang: 'zh-CN',
+      themeConfig: {
+        nav: buildNav('zh'),
+        sidebar: { '/zh/': buildSidebar('zh') },
+      },
+    },
+  }
+
+  for (const l of languages) {
+    const isEn = l.code === 'en'
+    locales[l.code] = {
+      label: l.label,
+      lang: isEn ? 'en-US' : l.code,
+      title: isEn ? 'Heng Yuan Zhou · Anchor Symbiosis Civilization' : undefined,
+      description: isEn ? 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Official Lore Library' : undefined,
+      themeConfig: {
+        nav: buildNav(l.code),
+        sidebar: { [`/${l.code}/`]: buildSidebar(l.code) },
+        ...intlUiLabels,
+        footer: intlFooter,
+      },
+    }
+  }
+
+  return locales
+}
 
 export default defineConfig({
   title: '衡元宙 · 锚点共生文明',
@@ -161,7 +224,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     siteTitle: '衡元宙',
-    nav: zhNav,
+    nav: buildNav('zh'),
     socialLinks: [{ icon: 'github', link: 'https://github.com/faker210/hengyuan-cosmos' }],
     footer: {
       message: '万灵衡锚本源宙 · 锚点共生文明 · 万族共和',
@@ -169,45 +232,5 @@ export default defineConfig({
     },
     search: { provider: 'local' },
   },
-  locales: {
-    root: {
-      label: '中文',
-      lang: 'zh-CN',
-      themeConfig: {
-        nav: zhNav,
-        sidebar: { '/zh/': buildSidebar('zh') },
-      },
-    },
-    zh: {
-      label: '中文',
-      lang: 'zh-CN',
-      themeConfig: {
-        nav: zhNav,
-        sidebar: { '/zh/': buildSidebar('zh') },
-      },
-    },
-    en: {
-      label: 'English',
-      lang: 'en-US',
-      title: 'Heng Yuan Zhou · Anchor Symbiosis Civilization',
-      description: 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Official Lore Library',
-      themeConfig: {
-        nav: enNav,
-        sidebar: { '/en/': buildSidebar('en') },
-        docFooter: {
-          prev: 'Previous page',
-          next: 'Next page',
-        },
-        outline: { label: 'On this page' },
-        lastUpdatedText: 'Last updated',
-        returnToTopLabel: 'Return to top',
-        sidebarMenuLabel: 'Menu',
-        darkModeSwitchLabel: 'Appearance',
-        footer: {
-          message: 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Anchor Symbiosis Civilization · Myriad Races Republic',
-          copyright: 'Copyright © 2026 Heng Yuan Zhou Lore Team',
-        },
-      },
-    },
-  },
+  locales: buildLocales(),
 })
