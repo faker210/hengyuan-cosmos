@@ -19,7 +19,8 @@ const languages = [
   { code: 'de', label: 'Deutsch' },
 ]
 
-const baseGroups: Array<{ min: number; max: number; title: string }> = [
+// ── 中文分组 ──────────────────────────────────────────
+const zhBaseGroups: Array<{ min: number; max: number; title: string }> = [
   { min: 0,  max: 9,  title: '总纲与核心设定' },
   { min: 10, max: 19, title: '修炼体系' },
   { min: 20, max: 29, title: '锚点与共生机制' },
@@ -32,7 +33,7 @@ const baseGroups: Array<{ min: number; max: number; title: string }> = [
   { min: 90, max: 99, title: '索引与附录' },
 ]
 
-const moduleGroups: Array<{ min: number; max: number; title: string; index: string }> = [
+const zhModuleGroups: Array<{ min: number; max: number; title: string; index: string }> = [
   { min: 100, max: 250, title: '境界深度细化', index: '模块一-境界深度细化索引' },
   { min: 251, max: 500, title: '诸天名著对标批判', index: '模块二-诸天名著对标批判索引' },
   { min: 501, max: 700, title: '双轨时间域文明体验', index: '模块三-双轨时间域文明体验索引' },
@@ -40,9 +41,35 @@ const moduleGroups: Array<{ min: number; max: number; title: string; index: stri
   { min: 901, max: 1000, title: '文明终极定型典藏', index: '模块五-文明终极定型典藏索引' },
 ]
 
-function buildSidebar() {
-  const dir = path.resolve('docs', 'zh')
+// ── 英文分组 ──────────────────────────────────────────
+const enBaseGroups: Array<{ min: number; max: number; title: string }> = [
+  { min: 0,  max: 9,  title: 'General Principles & Core Settings' },
+  { min: 10, max: 19, title: 'Cultivation Systems' },
+  { min: 20, max: 29, title: 'Anchor & Symbiosis Mechanisms' },
+  { min: 30, max: 39, title: 'Civilization Types & Society' },
+  { min: 40, max: 49, title: 'Law & Governance' },
+  { min: 50, max: 59, title: 'Myriad Races & Strange Beings' },
+  { min: 60, max: 69, title: 'Technology Systems' },
+  { min: 70, max: 79, title: 'Chronicle & Eras' },
+  { min: 80, max: 89, title: 'Planes & Time Rules' },
+  { min: 90, max: 99, title: 'Index & Appendix' },
+]
+
+const enModuleGroups: Array<{ min: number; max: number; title: string; index: string }> = [
+  { min: 100, max: 250, title: 'Deep Realm Refinement', index: '模块一-境界深度细化索引' },
+  { min: 251, max: 500, title: 'Cross-Universe Classic Critique', index: '模块二-诸天名著对标批判索引' },
+  { min: 501, max: 700, title: 'Dual-Track Time Domain Civilization', index: '模块三-双轨时间域文明体验索引' },
+  { min: 701, max: 900, title: 'Trans-Multiverse Transcendence Orthodoxy', index: '模块四-超多元超脱正统定义索引' },
+  { min: 901, max: 1000, title: 'Ultimate Civilization Compendium', index: '模块五-文明终极定型典藏索引' },
+]
+
+// ── 侧边栏构建（支持多语言）────────────────────────────
+function buildSidebar(lang: 'zh' | 'en' = 'zh') {
+  const dir = path.resolve('docs', lang)
   if (!fs.existsSync(dir)) return []
+
+  const baseGroups = lang === 'en' ? enBaseGroups : zhBaseGroups
+  const moduleGroups = lang === 'en' ? enModuleGroups : zhModuleGroups
 
   const files = fs
     .readdirSync(dir)
@@ -60,11 +87,13 @@ function buildSidebar() {
       .map((f) => {
         const name = f.replace(/\.md$/, '')
         const text = name.replace(/^\d{4}[_-]/, '')
-        return { text, link: `/zh/${name}.html` }
+        return { text, link: `/${lang}/${name}.html` }
       })
     if (!items.length) continue
     groups.push({
-      text: `${g.title}（${g.min.toString().padStart(4, '0')}–${g.max}）`,
+      text: lang === 'en'
+        ? `${g.title} (${g.min.toString().padStart(4, '0')}–${g.max.toString().padStart(4, '0')})`
+        : `${g.title}（${g.min.toString().padStart(4, '0')}–${g.max}）`,
       collapsed: false,
       items,
     })
@@ -75,17 +104,24 @@ function buildSidebar() {
       const n = parseInt(f.match(/^\d+/)[0], 10)
       return n >= g.min && n <= g.max
     }).length
-    if (!count) continue
+    // 英文侧边栏：即使模块文档未全部导入，也显示模块索引入口（占位页已存在）
+    if (!count && lang === 'zh') continue
+    const label = lang === 'en'
+      ? `${count > 0 ? count + ' translated · ' : ''}Open module index →`
+      : `共 ${count} 篇 · 打开模块索引 →`
     groups.push({
-      text: `${g.title}（${g.min}–${g.max}）`,
+      text: lang === 'en'
+        ? `${g.title} (${g.min}–${g.max})`
+        : `${g.title}（${g.min}–${g.max}）`,
       collapsed: true,
-      items: [{ text: `共 ${count} 篇 · 打开模块索引 →`, link: `/zh/${g.index}.html` }],
+      items: [{ text: label, link: `/${lang}/${g.index}.html` }],
     })
   }
 
   return groups
 }
 
+// ── 导航菜单 ──────────────────────────────────────────
 const zhNav = [
   { text: '首页', link: '/zh/' },
   { text: '术语表', link: '/glossary.html' },
@@ -94,6 +130,18 @@ const zhNav = [
   { text: '路线沙盘', link: '/sandbox/' },
   {
     text: '🌐 语言',
+    items: languages.map((l) => ({ text: l.label, link: `/${l.code}/` })),
+  },
+]
+
+const enNav = [
+  { text: 'Home', link: '/en/' },
+  { text: 'Glossary', link: '/glossary.html' },
+  { text: 'Constitution', link: '/constitution/' },
+  { text: 'Multiverse', link: '/multiverse/' },
+  { text: 'Sandbox', link: '/sandbox/' },
+  {
+    text: '🌐 Language',
     items: languages.map((l) => ({ text: l.label, link: `/${l.code}/` })),
   },
 ]
@@ -127,7 +175,7 @@ export default defineConfig({
       lang: 'zh-CN',
       themeConfig: {
         nav: zhNav,
-        sidebar: { '/zh/': buildSidebar() },
+        sidebar: { '/zh/': buildSidebar('zh') },
       },
     },
     zh: {
@@ -135,7 +183,30 @@ export default defineConfig({
       lang: 'zh-CN',
       themeConfig: {
         nav: zhNav,
-        sidebar: { '/zh/': buildSidebar() },
+        sidebar: { '/zh/': buildSidebar('zh') },
+      },
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      title: 'Heng Yuan Zhou · Anchor Symbiosis Civilization',
+      description: 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Official Lore Library',
+      themeConfig: {
+        nav: enNav,
+        sidebar: { '/en/': buildSidebar('en') },
+        docFooter: {
+          prev: 'Previous page',
+          next: 'Next page',
+        },
+        outline: { label: 'On this page' },
+        lastUpdatedText: 'Last updated',
+        returnToTopLabel: 'Return to top',
+        sidebarMenuLabel: 'Menu',
+        darkModeSwitchLabel: 'Appearance',
+        footer: {
+          message: 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Anchor Symbiosis Civilization · Myriad Races Republic',
+          copyright: 'Copyright © 2026 Heng Yuan Zhou Lore Team',
+        },
       },
     },
   },
