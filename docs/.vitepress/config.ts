@@ -63,14 +63,84 @@ const intlModuleGroups: Array<{ min: number; max: number; title: string; index: 
   { min: 901, max: 1000, title: 'Ultimate Civilization Compendium', index: '模块五-文明终极定型典藏索引' },
 ]
 
+// ── 各语种本地化分组标题（基础篇10组 + 模块篇5组）──────────
+const localizedGroupTitles: Record<string, { base: string[]; module: string[] }> = {
+  en: {
+    base: ['General Principles & Core Settings','Cultivation Systems','Anchor & Symbiosis Mechanisms','Civilization Types & Society','Law & Governance','Myriad Races & Strange Beings','Technology Systems','Chronicle & Eras','Planes & Time Rules','Index & Appendix'],
+    module: ['Deep Realm Refinement','Cross-Universe Classic Critique','Dual-Track Time Domain Civilization','Trans-Multiverse Transcendence Orthodoxy','Ultimate Civilization Compendium'],
+  },
+  fr: {
+    base: ['Principes généraux & Paramètres centraux','Systèmes de culture','Mécanismes d\'ancrage & de symbiose','Types de civilisation & Société','Droit & Gouvernance','Races myriades & Êtres étranges','Systèmes technologiques','Chronique & Ères','Plans & Règles temporelles','Index & Annexe'],
+    module: ['Raffinement des royaumes profonds','Critique des classiques inter-universels','Civilisation du domaine temporel à double voie','Orthodoxie de transcendance trans-multivers','Compendium ultime de civilisation'],
+  },
+  ru: {
+    base: ['Общие принципы & Основные настройки','Системы культивации','Механизмы якоря & симбиоза','Типы цивилизаций & Общество','Право & Управление','Мириады рас & Странные существа','Технологические системы','Хроника & Эры','Планы & Временные правила','Индекс & Приложение'],
+    module: ['Углубленное очищение царств','Критика межвселенских классиков','Цивилизация двойного временного домена','Ортодоксия транс-мультивселенского превосходства','Итоговый компендиум цивилизации'],
+  },
+  hi: {
+    base: ['सामान्य सिद्धांत और मुख्य सेटिंग्स','साधना प्रणालियाँ','एंकर और सहजीवन तंत्र','सभ्यता के प्रकार और समाज','कानून और शासन','अनंत जातियाँ और विचित्र प्राणी','तकनीकी प्रणालियाँ','कालक्रम और युग','सतह और समय नियम','सूचकांक और परिशिष्ट'],
+    module: ['गहन क्षेत्र परिशोधन','क्रॉस-यूनिवर्स क्लासिक आलोचना','दोहरी ट्रैक समय डोमेन सभ्यता','ट्रांस-मल्टीवर्स उत्कर्ष ऑर्थोडॉक्सी','अंतिम सभ्यता संग्रह'],
+  },
+  es: {
+    base: ['Principios generales & Configuración central','Sistemas de cultivo','Mecanismos de anclaje & simbiosis','Tipos de civilización & Sociedad','Derecho & Gobernanza','Miriadas de razas & Seres extraños','Sistemas tecnológicos','Crónica & Eras','Planos & Reglas temporales','Índice & Apéndice'],
+    module: ['Refinamiento de reinos profundos','Crítica de clásicos interuniversales','Civilización de dominio temporal de doble vía','Ortodoxia de trascendencia transmultiversal','Compendio último de civilización'],
+  },
+  ar: {
+    base: ['المبادئ العامة والإعدادات الأساسية','أنظمة التنمية','آليات المرساة والتعايش','أنواع الحضارات والمجتمع','القانون والحوكمة','أعداد لا تحصى من الأعراق والكائنات الغريبة','الأنظمة التكنولوجية','السجل الزمني والعصور','المستويات وقواعد الزمن','الفهرس والملحق'],
+    module: ['تنقية العوالم العميقة','نقد الكلاسيكيات عبر الأكوان','حضارة مجال الزمن ثنائي المسار','الأرثوذكسية المتعالية عبر الأكوان المتعددة','مختصر الحضارة النهائي'],
+  },
+  bn: {
+    base: ['সাধারণ নীতি ও মূল সেটিংস','অভ্যাস পদ্ধতি','অ্যাঙ্কর ও সহজাত প্রক্রিয়া','সভ্যতার প্রকার ও সমাজ','আইন ও প্রশাসন','অসংখ্য জাতি ও অদ্ভুত প্রাণী','প্রযুক্তি পদ্ধতি','কাললিপি ও যুগ','স্তর ও সময় নিয়ম','সূচিপত্র ও পরিশিষ্ট'],
+    module: ['গভীর অঞ্চল পরিশোধন','ক্রস-ইউনিভার্স ক্লাসিক সমালোচনা','ডুয়াল-ট্র্যাক টাইম ডোমেন সভ্যতা','ট্রান্স-মাল্টিভার্স ট্রান্সসেন্ডেন্স অর্থোডক্সি','আল্টিমেট সিভিলাইজেশন কমপেন্ডিয়াম'],
+  },
+  pt: {
+    base: ['Princípios gerais & Configurações centrais','Sistemas de cultivo','Mecanismos de âncora & simbiose','Tipos de civilização & Sociedade','Direito & Governança','Miríades de raças & Seres estranhos','Sistemas tecnológicos','Crônica & Eras','Planos & Regras temporais','Índice & Apêndice'],
+    module: ['Refinamento de reinos profundos','Crítica de clássicos interuniversais','Civilização de domínio temporal de via dupla','Ortodoxia de transcendência transmultiversal','Compêndio último de civilização'],
+  },
+  id: {
+    base: ['Prinsip umum & Pengaturan inti','Sistem kultivasi','Mekanisme jangkar & simbiosis','Tipe peradaban & Masyarakat','Hukum & Tata kelola','Segudang ras & Makhluk aneh','Sistem teknologi','Kronik & Era','Bidang & Aturan waktu','Indeks & Lampiran'],
+    module: ['Pemurnian alam mendalam','Kritik klasik lintas semesta','Peradaban domain waktu jalur ganda','Ortodoksi transendensi trans-multiverse','Kompendium peradaban utama'],
+  },
+  ur: {
+    base: ['عام اصول اور بنیادی ترتیبات','مہارت کے نظام','اینکر اور سمبیوسس کے طریقہ کار','تہذیب کی اقسام اور معاشرہ','قانون اور حکمرانی','ان گنت نسلیں اور عجیب مخلوقات','ٹیکنالوجی کے نظام','تاریخ اور ادوار','مستویں اور وقت کے اصول','فہرست اور ضمیمہ'],
+    module: ['گہرے دائرے کی تطہیر','کارس یونیورس کلاسک تنقید','دوہری ٹریک ٹائم ڈومین تہذیب','ٹرانس ملٹیورس ٹرانسینڈنس آرتھوڈوکسی','حتمی تہذیب کا خلاصہ'],
+  },
+  ja: {
+    base: ['総綱とコア設定','修練体系','アンカーと共生メカニズム','文明類型と社会','律法と統治','万族と異質な存在','技術体系','紀元編年','位面と時間ルール','索引と付録'],
+    module: ['境界深度精錬','諸天名著対標批判','双軌時間域文明体験','超多元超脱正統定義','文明究極定型典藏'],
+  },
+  vi: {
+    base: ['Nguyên tắc chung & Cài đặt cốt lõi','Hệ thống tu luyện','Cơ chế neo & cộng sinh','Loại hình văn minh & Xã hội','Pháp luật & Quản trị','Vô số chủng tộc & Sinh vật kỳ lạ','Hệ thống công nghệ','Biên niên & Kỷ nguyên','Mặt phẳng & Quy tắc thời gian','Mục lục & Phụ lục'],
+    module: ['Tinh luyện cõi sâu','Phê bình kinh điển liên vũ trụ','Văn minh miền thời gian song hành','Chính thống siêu việt đa vũ trụ','Tổng tuyển văn minh tối thượng'],
+  },
+  sw: {
+    base: ['Masharti ya jumla & Mipangilio ya msingi','Mifumo ya uao','Mifumo ya nanga & ushirikisho','Aina za ustaarabu & Jamii','Sheria & Utawala','Makabila mengi & Viumbe vya ajabu','Mifumo ya teknolojia','Kumbukumbu & Enzi','Ngazi & Kanuni za wakati','Fahari & Kiambatisho'],
+    module: ['Utoaji wa kina wa maeneo','Ukosoaji wa sanjo za ulimwenguni','Ustaarabu wa eneo la wakati wa njia mbili','Utamaduni wa juu wa ulimwengu mkuu','Mkusanyiko wa mwisho wa ustaarabu'],
+  },
+  de: {
+    base: ['Allgemeine Grundsätze & Kerneinstellungen','Kultivierungssysteme','Anker- & Symbiosemechanismen','Zivilisationstypen & Gesellschaft','Recht & Governance','Myriaden von Rassen & Fremde Wesen','Technologiesysteme','Chronik & Epochen','Ebenen & Zeitregeln','Index & Anhang'],
+    module: ['Tiefenreich-Verfeinerung','Klassiker-Kritik über Universen hinweg','Zivilisation der dualen Zeitdomäne','Trans-Multiversum-Transzendenz-Orthodoxie','Ultimatives Zivilisationskompendium'],
+  },
+}
+
+// ── 根据语种生成分组（使用本地化标题）────────────────────
+function getGroupsForLang(lang: string) {
+  const loc = localizedGroupTitles[lang]
+  if (!loc) return { base: intlBaseGroups, module: intlModuleGroups }
+  const base = intlBaseGroups.map((g, i) => ({ ...g, title: loc.base[i] || g.title }))
+  const module = intlModuleGroups.map((g, i) => ({ ...g, title: loc.module[i] || g.title }))
+  return { base, module }
+}
+
 // ── 侧边栏构建（支持全部语种，自动扫描 docs/<lang>/ 目录）──
 function buildSidebar(lang: string) {
   const dir = path.resolve('docs', lang)
   if (!fs.existsSync(dir)) return []
 
   const isZh = lang === 'zh'
-  const baseGroups = isZh ? zhBaseGroups : intlBaseGroups
-  const moduleGroups = isZh ? zhModuleGroups : intlModuleGroups
+  const { base: baseGroups, module: moduleGroups } = isZh
+    ? { base: zhBaseGroups, module: zhModuleGroups }
+    : getGroupsForLang(lang)
 
   const files = fs
     .readdirSync(dir)
@@ -102,21 +172,21 @@ function buildSidebar(lang: string) {
   }
 
   // 模块篇 100–1000：折叠为模块索引入口（非中文即使文档少也显示入口）
+  const moduleLabel = isZh
+    ? (count: number) => `共 ${count} 篇 · 打开模块索引 →`
+    : (count: number) => `${count > 0 ? count + ' translated · ' : ''}Open module index →`
   for (const g of moduleGroups) {
     const count = files.filter((f) => {
       const n = parseInt(f.match(/^\d+/)[0], 10)
       return n >= g.min && n <= g.max
     }).length
     if (!count && isZh) continue
-    const label = isZh
-      ? `共 ${count} 篇 · 打开模块索引 →`
-      : `${count > 0 ? count + ' translated · ' : ''}Open module index →`
     groups.push({
       text: isZh
         ? `${g.title}（${g.min}–${g.max}）`
         : `${g.title} (${g.min}–${g.max})`,
       collapsed: true,
-      items: [{ text: label, link: `/${lang}/${g.index}.html` }],
+      items: [{ text: moduleLabel(count), link: `/${lang}/${g.index}.html` }],
     })
   }
 
