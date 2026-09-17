@@ -132,6 +132,35 @@ function getGroupsForLang(lang: string) {
   return { base, module }
 }
 
+// ── 从 Markdown 文件提取本地化标题（frontmatter title 或首个 # 标题）──
+function extractDocTitle(filePath: string, fallback: string): string {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    // 1. 尝试 frontmatter title
+    const fmMatch = content.match(/^---\s*\n([\s\S]*?)\n---/)
+    if (fmMatch) {
+      const titleMatch = fmMatch[1].match(/^title:\s*(.+)$/m)
+      if (titleMatch) {
+        let t = titleMatch[1].trim()
+        // 去除可能的引号
+        if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
+          t = t.slice(1, -1)
+        }
+        if (t) return t
+      }
+    }
+    // 2. 尝试首个 # 标题
+    const h1Match = content.match(/^#\s+(.+)$/m)
+    if (h1Match) {
+      const t = h1Match[1].trim()
+      if (t) return t
+    }
+  } catch {
+    // 读取失败则用 fallback
+  }
+  return fallback
+}
+
 // ── 侧边栏构建（支持全部语种，自动扫描 docs/<lang>/ 目录）──
 function buildSidebar(lang: string) {
   const dir = path.resolve('docs', lang)
@@ -158,7 +187,8 @@ function buildSidebar(lang: string) {
       })
       .map((f) => {
         const name = f.replace(/\.md$/, '')
-        const text = name.replace(/^\d{4}[_-]/, '')
+        const fallback = name.replace(/^\d{4}[_-]/, '')
+        const text = extractDocTitle(path.join(dir, f), fallback)
         return { text, link: `/${lang}/${name}.html` }
       })
     if (!items.length) continue
