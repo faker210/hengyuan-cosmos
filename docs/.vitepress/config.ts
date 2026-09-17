@@ -169,6 +169,17 @@ const intlUiLabels = {
   darkModeSwitchLabel: 'Appearance',
 }
 
+// ── 生成全部语种的全局 sidebar（按路径前缀匹配）──────────
+function buildAllSidebars() {
+  const all: any = {
+    '/zh/': buildSidebar('zh'),
+  }
+  for (const l of languages) {
+    all[`/${l.code}/`] = buildSidebar(l.code)
+  }
+  return all
+}
+
 // ── 动态生成全部语种的 locale 配置 ─────────────────────
 function buildLocales() {
   const locales: any = {
@@ -177,7 +188,6 @@ function buildLocales() {
       lang: 'zh-CN',
       themeConfig: {
         nav: buildNav('zh'),
-        sidebar: { '/zh/': buildSidebar('zh') },
       },
     },
     zh: {
@@ -185,7 +195,6 @@ function buildLocales() {
       lang: 'zh-CN',
       themeConfig: {
         nav: buildNav('zh'),
-        sidebar: { '/zh/': buildSidebar('zh') },
       },
     },
   }
@@ -199,7 +208,6 @@ function buildLocales() {
       description: isEn ? 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Official Lore Library' : undefined,
       themeConfig: {
         nav: buildNav(l.code),
-        sidebar: { [`/${l.code}/`]: buildSidebar(l.code) },
         ...intlUiLabels,
         footer: intlFooter,
       },
@@ -225,6 +233,7 @@ export default defineConfig({
     logo: '/logo.svg',
     siteTitle: '衡元宙',
     nav: buildNav('zh'),
+    sidebar: buildAllSidebars(),
     socialLinks: [{ icon: 'github', link: 'https://github.com/faker210/hengyuan-cosmos' }],
     footer: {
       message: '万灵衡锚本源宙 · 锚点共生文明 · 万族共和',
