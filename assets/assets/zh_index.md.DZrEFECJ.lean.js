@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as d,a2 as l}from"./chunks/framework.CqpfiAoK.js";const p=JSON.parse('{"title":"衡元宙宇宙总览","description":"","frontmatter":{},"headers":[],"relativePath":"zh/index.md","filePath":"zh/index.md"}'),r={name:"zh/index.md"};function o(n,t,i,h,s,u){return a(),d("div",null,[...t[0]||(t[0]=[l("",28)])])}const c=e(r,[["render",o]]);export{p as __pageData,c as default};
