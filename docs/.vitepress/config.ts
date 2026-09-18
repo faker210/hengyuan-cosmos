@@ -280,6 +280,23 @@ function buildAllSidebars() {
   return all
 }
 
+// ── 各语种站点标题与描述（本地化）─────────────────────
+const localeMeta: Record<string, { title: string; description: string }> = {
+  en: { title: 'Heng Yuan Zhou · Anchor Symbiosis Civilization', description: 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Official Lore Library' },
+  ja: { title: '衡元宙・錨点共生文明', description: '万霊衡锚本源宙・錨点共生文明公式設定文庫' },
+  fr: { title: 'Heng Yuan Zhou · Civilisation Symbiotique de l' + "'" + 'Ancre', description: 'Le Cosmos Originel des Dix Mille Esprits et de l' + "'" + 'Ancre Équilibrée · Bibliothèque Officielle' },
+  de: { title: 'Heng Yuan Zhou · Anker-Symbiotische Zivilisation', description: 'Der Originalkosmos der Zehntausend Geister und des Ausgeglichenen Ankers · Offizielle Mythothek' },
+  ru: { title: 'Хэн Юаньчжоу · Симбиотическая Цивилизация Якоря', description: 'Исходная Вселенная Десяти Тысяч Духов и Сбалансированного Якоря · Официальная библиотека' },
+  es: { title: 'Heng Yuan Zhou · Civilización Simbiótica del Ancla', description: 'El Cosmos Original de los Diez Mil Espíritus y el Ancla Equilibrada · Biblioteca Oficial' },
+  ar: { title: 'هنغ يوانتشو · حضارة التكافل الراسية', description: 'الكون الأصلي لعشرة آلاف الأرواح والمرساة المتوازنة · مكتبة المعرفة الرسمية' },
+  hi: { title: 'हेंग युआनझोउ · एंकर सहजीवन सभ्यता', description: 'दस हजार आत्माओं और संतुलित एंकर का मूल ब्रह्मांड · आधिकारिक लाइब्रेरी' },
+  pt: { title: 'Heng Yuan Zhou · Civilização Simbiótica da Âncora', description: 'O Cosmos Original dos Dez Mil Espíritos e da Âncora Equilibrada · Biblioteca Oficial' },
+  vi: { title: 'Trục Nguyên Trụ · Văn minh Cộng sinh Neo', description: 'Vũ trụ gốc của mười linh hồn và Neo cân bằng · Thư viện chính thức' },
+  id: { title: 'Heng Yuan Zhou · Peradaban Simbiosis Jangkar', description: 'Kosmos Asli dari Sepuluh Ribu Roh dan Jangkar Seimbang · Perpustakaan Resmi' },
+  sw: { title: 'Heng Yuan Zhou · Ustaarabu wa Usawa wa Nanga', description: 'Cosmos ya Asili ya Roho elfu Kumi na Nanga Sahihi · Maktaba ya Rasmi' },
+  bn: { title: 'হেঙ ইয়ানঝোউ · অ্যাঙ্কর সিম্বায়োটিক সভ্যতা', description: 'দশ হাজার আত্মা এবং ভারসাম্যপূর্ণ অ্যাঙ্করের মূল মহাবিশ্ব · অফিসিয়াল লাইব্রেরি' },
+  ur: { title: 'ہینگ یوانژو · لنگر سمبیوٹک تہذیب', description: 'دس ہزار روحوں اور متوازن لنگر کا اصل کائنات · آفیشل لائبریری' },
+}
 // ── 动态生成全部语种的 locale 配置 ─────────────────────
 function buildLocales() {
   const locales: any = {
@@ -304,8 +321,8 @@ function buildLocales() {
     locales[l.code] = {
       label: l.label,
       lang: isEn ? 'en-US' : l.code,
-      title: isEn ? 'Heng Yuan Zhou · Anchor Symbiosis Civilization' : undefined,
-      description: isEn ? 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Official Lore Library' : undefined,
+      title: localeMeta[l.code]?.title || 'Heng Yuan Zhou · Anchor Symbiosis Civilization',
+      description: localeMeta[l.code]?.description || 'The Original Cosmos of Ten Thousand Spirits and the Balanced Anchor · Official Lore Library',
       themeConfig: {
         nav: buildNav(l.code),
         ...intlUiLabels,
