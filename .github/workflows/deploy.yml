@@ -28,6 +28,19 @@ jobs:
         run: npm run docs:build
         env:
           NODE_OPTIONS: --max-old-space-size=8192
+      - name: Diagnose dist size
+        run: |
+          du -sh docs/.vitepress/dist
+          echo '--- top dirs ---'
+          du -sh docs/.vitepress/dist/* | sort -rh | head -20
+          echo '--- total files ---'
+          find docs/.vitepress/dist -type f | wc -l
+          echo '--- html count ---'
+          find docs/.vitepress/dist -name '*.html' | wc -l
+          echo '--- sample html sizes ---'
+          find docs/.vitepress/dist -name '*.html' -size +100k | head -5 | xargs ls -la
+          echo '--- assets size ---'
+          du -sh docs/.vitepress/dist/assets 2>/dev/null || echo 'no assets'
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
