@@ -201,25 +201,19 @@ function buildSidebar(lang: string) {
     })
   }
 
-  // 模块篇 100–1000：折叠为分组，列出实际文档
+  // 模块篇 100–1000：只显示模块索引入口（避免侧边栏数据膨胀）
   for (const g of moduleGroups) {
-    const items = files
-      .filter((f) => {
-        const n = parseInt(f.match(/^\d+/)[0], 10)
-        return n >= g.min && n <= g.max
-      })
-      .map((f) => {
-        const name = f.replace(/\.md$/, '')
-        const fallback = name.replace(/^\d{4}[_-]/, '')
-        return { text: fallback, link: `/${lang}/${name}.html` }
-      })
-    if (!items.length) continue
+    const count = files.filter((f) => {
+      const n = parseInt(f.match(/^\d+/)[0], 10)
+      return n >= g.min && n <= g.max
+    }).length
+    if (!count) continue
     groups.push({
       text: isZh
-        ? `${g.title}（${g.min}–${g.max}，${items.length}篇）`
-        : `${g.title} (${g.min}–${g.max}, ${items.length})`,
+        ? `${g.title}（${g.min}–${g.max}，${count}篇）`
+        : `${g.title} (${g.min}–${g.max}, ${count})`,
       collapsed: true,
-      items,
+      items: [{ text: isZh ? '📖 查看全部文档' : '📖 View all documents', link: `/${lang}/${g.index}.html` }],
     })
   }
 
