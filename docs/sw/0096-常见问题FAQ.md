@@ -1,0 +1,104 @@
+# Maswali Yanayoulizwa Mara kwa Mara FAQ
+
+| Kipengele | Maudhui |
+|-----------|---------|
+| Nambari ya hati | 96 |
+| Moduli | Viambatanisho na Vifaa vya Rujia |
+| Maneno muhimu | maswali yanayoulizwa mara kwa mara, FAQ, majibu ya maswali, ufafanuzi wa mipangilio, mwongozo wa kuanza |
+
+## 1. Maelezo
+
+Hati hii ina maswali yanayoulizwa mara kwa mara na majibu kuhusu mfumo wa mipangilio wa Ustaarabu wa Usawa wa Nanga, imeandaliwa kulingana na mada. Maswali yanajumuisha mazingira anuwai kama vile dhana za msingi za mtazamo wa dunia, mfumo wa u cultivating, mifumo ya kijamii, mfumo wa sheria, mwingiliano kati ya usawa, na sheria za muda. Lengo la hati hii ni kutoa mwongozo wa kuanza wa haraka kwa wasomaji wanaokutana na mipangilio ya Ustaarabu wa Usawa wa Nanga kwa mara ya kwanza, na kwa wakati uo huo kutoa majibu yenye mamlaka kwa maswali yanayoulizwa mara kwa mara kwa watafiti wa kina. Hati hii ni hati ya sasisho la harakati; pamoja na maoni ya wasomaji, maswali na majibu mapita yatakuwa zinaongezwa kila wakati.
+
+## 2. Mtazamo wa Dunia na Dhana za Msingi
+
+**Q1: Madai ya msingi ya Ustaarabu wa Usawa wa Nanga ni nini?**
+A: Madai ya msingi ya Ustaarabu wa Usawa wa Nanga ni "kupinga ubaozi, kukuza usawa". Kwa hasa, inapinga mfumo wa u cultivating wa aina ya ubaozi ambao unachukua nguvu, bahati, na hata asili ya wanyonge kama bei, na inashirikisha mageuzi ya pamoja kupitia ushirikiano wa usawa. Dhana ya msingi ya utamaduni ni "kurudisha haki ya kuchagua takatifu na mageuzi kwa viumbe vyote", na sera ya msingi ni "kazi nyingi faida nyingi, kukua kwa kinafsi, kila mtu ana njia, kabila zote zinakuwa pamoja".
+
+**Q2: Je, kanuni ya "kuzingatia ukweli" inamaanisha nini?**
+A: "Kuzingatia ukweli" ni mojawapo ya msimamo wa msingi wa Ustaarabu wa Usawa wa Nanga, inayoonyesha kuwa dunia ya kweli ndio dunia ya kweli pekee, na dunia ya riwaya ni jaribio la akili la uongo. Katika ujenzi wa mipangilio, sehemu za ubuni zisizosuffi zimejazwa na ukweli, na mambo ambayo hayapo katika ukweli yanaongezwa kwa kiwango cha juu na kuundwa kulingana na sheria za kisayansi. Kanuni hii inahakikisha utendekanaji wa kimantiki na uwezo wa kuthibitisha kwa ukweli wa mfumo wa mipangilio, na kuepuka kuanguka kwa mipangilio kutokana na ubuni usio na msingi.
+
+**Q3: Je, uhusiano kati ya Hengyuanzhou na ulimwengu ni upi?**
+A: Jina kamili la Hengyuanzhou ni "Wan Ling Heng Mao Ben Yuan Zhou", ambayo ni ulimwengu wote unaoishi na kutawaliwa na Ustaarabu wa Usawa wa Nanga. Sio ulimwengu wa kimoja wa kimwili kwa maana ya kawaida, bali ni kiumbe cha mchanganyiko kinachoundwa na tabaka nne: usawa wa kimwili, tabaka la nguvu, kikoa cha ufahamu, na mtandao wa sheria. Inaweza kueleweka kuwa Hengyuanzhou ni mfumo wa ulimwengu wa juu ambao una jumla ya usawa nyingi na anatumia mchakato wa nanga kama chombo cha msingi cha udhibiti.
+
+## 3. Mfumo wa U cultivating
+
+**Q4: Tatu mia seti za mfumo wa u cultivating wa asili zimetoka wapi?**
+A: Tatu mia seti za mifumo sio mbinu za u cultivating zilizoandaliwa kwa kimaumbile, bali ni njia za u cultivating za jadi zilizotolewa moja kwa moja kutoka sheria za asili za ulimwengu na zilithibitishwa na nanga. Wakati wa usanifu wa mfumo wa usawa, timu iliyoongozwa na "San Baishi" ilifanya uchimbaji na mpangilio wa kisayansi wa sheria za ulimwengu, na mwishowe ilikusanya tatu mia seti za mifumo ya u cultivating zinazofunika mazingira yote ya mageuzi. Mifumo hii imegawanywa katika aina sita: aina ya tafakari ya asili, aina ya mzunguko wa maisha, aina ya sheria za nafasi, aina ya kuongeza kiwango cha ufahamu, aina ya mtandao wa usawa, na aina ya uhandisi wa matumizi, na kila aina ina hamsini seti.
+
+**Q5: Kwanini seti tatu za kwanza za mifumo huitwa "misingi mitatu ya asili"?**
+A: Seti tatu za kwanza za mifumo — kurudia tafakari (seti ya 1), mzunguko wa maisha (seti ya 2), na usimamizi wa sheria za nafasi (seti ya 3) — ni msingi wa u cultivating wa mifumo yote mingine. Mfumo wa kurudia tafakari unatoa msingi wa hekima na mbinu, mfumo wa mzunguko wa maisha unatoa msingi wa nguvu ya maisha, na mfumo wa usimamizi wa sheria za nafasi unatoa msingi wa uendeshaji wa nafasi na sheria. Inapendekezwa kwamba wanaofanya u cultivating wa mfumo wowote lingine wanapaswa kufanya mazoezi ya angalau moja kati ya misingi mitatu ya asili kwanza, ili kuweka msingi thabiti wa mageuzi.
+
+**Q6: Tunda la Bei Zeng ni nini? Je, uhusiano wake na One Piece ni upi?**
+A: Tunda la Bei Zeng ni mojawapo ya "buff za kuanza" za Ustaarabu wa Usawa wa Nanga, inayotoka kwa mipangilio ya tunda la Bei Zeng katika dunia ya One Piece. Katika Hengyuanzhou, tunda la Bei Zeng limetumika kwa teknolojia, na lina uwezo wa kuongeza uwezo wa tafakari wa mtu anayefanya u cultivating kwa mara mia moja, na ni chombo cha msingi cha msaada wa mfumo wa kurudia tafakari. Mipangilio hii inaonyesha kanuni ya "kujaza sehemu za ubuni zisizosuffi na ukweli, kuongeza kiwango cha juu na kuunda mambo ambayo hayapo katika ukweli kulingana na sheria" — kuingiza mipangilio inayovutia ya kazi za ubuni katika mfumo wa teknolojia ya utamaduni wa usawa baada ya mabadiliko ya sheria.
+
+**Q7: Mkakati wa uanzishaji wa 20% ni nini? Kwanini 20%?**
+A: Mkakati wa uanzishaji wa 20% ni lengo la mkakati wa hatua za Ustaarabu wa Usawa wa Nanga, ambalo lengo lake ni kuanzisha 20% ya viumbe vyote vya ulimwengu wote kuwa wenye nguvu za juu za usawa katika hatua ya kwanza. Uchaguzi wa uwiano wa 20% unategemea uchambuzi wa mienendo ya mtandao wa usawa — wakati 20% ya nodi katika mtandao inafikia hali ya nguvu ya juu, athari ya sauti sauti ya jumla ya mtandao inachocheza hatua ya hatari, inayochocheza mageuzi ya haraka ya nodi 80% iliyobaki. Hizi 20% za wenye nguvu za juu za usawa zitafanya kazi kama nguvu ya msingi, na zicheze jukumu la msingi katika kudumisha nanga, mwongozo wa walimu, na ujenzi wa utamaduni.
+
+## 4. Mifumo ya Kijamii na Sheria
+
+**Q5: Aina tano za uainishaji wa utamaduni wa usawa ni zipi?**
+A: Aina tano za uainishaji wa utamaduni wa usawa ni aina tano za jamii za usawa zilizogawanywa kulingana na sifa za utamaduni wa dunia ya kweli, ikiwa ni pamoja na: aina ya umoja wa Asia Mashariki (inajulikana na shirikisho la ufanisi na kujitegemea kwa jumla), aina ya fursa za kimaendeleo za Kaskazini mwa Ulaya (inajulikana na fursa za juu na usawa wa kijamii), aina ya anuwai ya Kaskazini mwa Amerika (inajulikana na utamaduni wa anuwai na uwezo wa ubunifu), aina ya kijamii ya bara la Ulaya (inajulikana na uchumi wa soko wa kijamii na ushirikiano wa wafanyakazi), na aina ya kukabiliana na maendeleo (inajulikana na maendeleo ya haraka na faida ya kuchelewesha). Aina hizi tano za uainishaji sio uainishaji ambao kila moja inakana nyingine, bali ni mifano ya rujia inayoweza kujifunza kwa kila moja na kukuza kwa umoja.
+
+**Q9: Je, mchakato wa mkataba wa uzalishaji wa pamoja unafanya kazi vipi?**
+A: Mchakato wa mkataba wa uzalishaji wa pamoja ni mfumo wa msingi wa mgawanyo wa rasilimali wa Ustaarabu wa Usawa wa Nanga, uliopata msukumo kutoka kwa mfumo wa jukumu la mkataba wa uzalishaji wa pamoja wa familia katika dunia ya kweli. Njia yake ya kufanya kazi ni: kugawanya rasilimali za u cultivating za ulimwengu kwa watu binafsi au vikundi kwa njia ya "mkataba", na mtu anayesaini mkataba anapata haki ya matumizi na haki ya faida kutoka kwa rasilimali kupitia kazi na mchango. Kazi nyingi faida nyingi, na kadri mchango unavokuwa mkubasi ndivyo rasilimali zinazopata zivyo. Mchakato huu hakikishi tu mgawanyo wa haki wa rasilimali, lakini pia anachocheza hamasa ya kazi ya mtu binafsi, na anatimiza umoja wa haki na ufanisi.
+
+**Q10: Je, uhusiano kati ya Katiba ya Usawa na sheria za kawaida ni upi?**
+A: Katiba ya Usawa ni sheria ya msingi ya Ustaarabu wa Usawa wa Nanga, yenye uwezo wa juu wa kisheria. Sheria zote, kanuni za utawala, na kanuni za eneo hazipaswi kipingana na Katiba. Sheria ya Kazi ya Usawa, Sheria ya Kulinda Watumiaji, na sheria tano za ziada za elimu, afya, makazi, mazingira, na kuzuia ushamba ni sheria za sekta zote zilizoundwa kwa msingi wa Katiba ya Usawa kama msingi wa kisheria, na zina jukumu la kufanya maelezo ya kanuni za msingi za Katiba kuwa dhahiri na zinazoweza kutekelezwa. Mahakama ya Usawa ina haki ya kufanya uchunguzi wa katiba dhidi ya sheria zinazovunja Katiba na kuzitangaza zimeharibika.
+
+## 5. Mwingiliano Kati ya Usawa
+
+**Q11: Je, mpango wa kale wa "kioo cha nakala + nafasi iliyotengwa + kurudisha maarifa tu" ni nini?**
+A: Hii ni mpango wa kawaida wa kale wa kati ya usawa na kurudia nyuma kwa muda wa Ustaarabu wa Usawa wa Nanga, unaojumuisha mambo matatu ya msingi:
+1. **Kioo cha nakala**: kufanya nakala kamili ya 1:1 ya lengo la kale bila kugusa kitu cha asili, na mchakato wa kunakala hubadilisha hali yoyote ya kitu cha asili.
+2. **Nafasi iliyotengwa**: nakala inatengenezwa katika nafasi ya kujitegemea iliyotengwa kabisa na lengo, na wataalamu wa wanafanya kazi za utafiti zote ndani ya nafasi iliyotengwa.
+3. **Kurudisha maarifa tu**: baada ya kumaliza kale, maarifa na taarifa za abstract tu zinaweza kurudishwa; vitu vya kimwili na nguvu za nakala lazima vimaradiwe ndani ya nafasi iliyotengwa, na havifai kuchukuliwa kurudi kwenye usawa wa mwenyewe.
+Mpango huu unahakikisha usingiliani kati ya mchakato wa kale na usawa wa lengo au kipindi cha lengo, na kwa wakati uo huo anazuia uchafuzi wa kati ya usawa.
+
+**Q12: Kwanini lazima tufuate kanuni ya "kwanza kuchunguza, kisha kuingilia kwa kikomo"?**
+A: Dhana ya msingi ya kanuni hii ni "unyenyevu wa utambuzi" — hata wenye nguvu za juu za usawa hawawezi kushika kabisa uhusiano wote wa sababu na matokeo ya nodi ya muda au utamaduni wa usawa. Uingiliani wowote wa moja kwa moja katika zamani au usawa mwingine unaweza kusababisha mwendelezo wa sababu na matokeo ambao hauwezi kutabiriwa. Kwa hivyo, lazima kwanza tufanye uchunguzi wa kina kwa mtazamo wa mwangalifu zaidi, na chini ya masharti ya data za uchunguzi za kutosha na tathmini ya hatari dhahiri, tuingiliane kwa kikomo na upeo wa kizuizi kali. Kanuni hii ni dhamana ya msingi kwa usalama wa operesheni za kurudia nyuma kwa muda na kati ya usawa.
+
+**Q13: Je, inahitaji masharti gani kwa safari kati ya usawa?**
+A: Safari ya usawa inahitaji kutimiza masharti yafuatayo: kwanza, mtu anayesafiri lazima awe na u cultivating wa hatua ya tatu (Hua Kong Jing) au zaidi ya mfumo wa usimamizi wa sheria za nafasi, au abebe chombo cha safari kinachofuata viwango; pili, lazima apate idhini ya safari ya kiwango cha husika kilichotolewa na Ofisi ya Usimamizi wa Usawa (kiwango cha A cha uchunguzi wa kale, kiwango cha B cha ubadilishaji wa kitaaluma, kiwango cha C cha ushirikiano wa rasilimali, kiwango cha D cha kuingilia kwa dharura); tatu, kila mwanzo na mwisho wa safari lazima iwe na nanga kwa usawazishaji wa mawasiliano; nne, lazima ukamilishe mchakato wa kusafisha wa viwango vitatu (kusafisha kwa kibaolojia, kusafisha kwa nguvu, kusafisha kwa ufahamu); tano, nguvu ya safari lazima ibebwe na mwenyewe, na inakatazwa kuchukua kutoka kwenye usawa wa lengo.
+
+## 6. Sheria za Muda
+
+**Q14: Je, tofauti kati ya kurudia nyuma kwa muda na kusafiri kwa muda ni ipi?**
+A: Katika mipangilio ya Hengyuanzhou, kurudia nyuma kwa muda si sawa na kusafiri kwa muda. Mtu anayerudia nyuma kwa muda haingia zamani katika umbo kamili wa kimwili, bali anafika kwenye nodi ya muda ya lengo kwa umbo wa uwakilishi wa ufahamu au pakiti ya taarifa. Uwepo wa mtu anayerudia nyuma katika kipindi cha zamani ni "nusu uwazi" — anaweza kuchunguza, lakini uwezo wa mwingiliano wa kimwili umekwamisha kwa kizuizi kali. Muundo huu mwenyewe ni sehemu ya mchakato wa usalama wa kurudia nyuma kwa muda, na hupunguza uwezo wa mtu anayerudia nyuma kusababisha uingiliani wa kimwili katika zamani.
+
+**Q15: Je, kuna aina gani za paradoksi za muda? Je, tunawezaje kuzitahiri?**
+A: Paradoksi za muda zimegawanywa katika aina nne kuu: paradoksi ya baba mkubwa (tabia ya mtu anayerudia nyuma husababisha masharti ya sababu na matokeo ya uwepo wake mwenyewe kufutwa), paradoksi ya taarifa (taarifa inayorudishwa kutoka siku zijazo hadi zamani huunda mzunguko wa taarifa usio na chanzo), paradoksi ya kiutambulisho (mwingiliano wa mtu anayerudia nyuma na yeye mwenyewe katika zamani husababisha mkanganyiko wa ufahamu wa kiutambulisho), na paradoksi ya tukio (mtu anayerudia nyuma anabadilisha matukio muhimu ya kihistoria, na kusababisha muundo mpya wa mnyororo wa sababu na matokeo). Mifumo ya kuzuia ni pamoja na: tathmini ya sababu na matokeo kabla ya kurudia nyuma na kutenga kwa sababu na matokeo ya mtu anayerudia nyuma kabla ya tukio, mfumo wa orodha nyeupe ya tabia za uingiliani, ufuatiliaji wa muda halisi wa sababu na matokeo na mwitikio wa dharura wa viwango vitatu wakati wa tukio, urekebishaji wa sababu na matokeo na ukaguzi baada ya tukio. Lengo la mfumo wote wa kuzuia ni kuondoa paradoksi katika hali ya mbegu.
+
+## 7. Maisha na Makabila
+
+**Q16: Je, maisha ya ajabu na nguvu ya ajabu ni nini?**
+A: Maisha ya ajabu yanamaanisha aina za maisha zenye umbo wa uwepo wa pekee ambazo hazilingani na ufafanuzi wa kawaida wa maisha, kama vile maisha ya nguvu safi, maisha ya umbo la ufahamu, maisha ya mitambo, n.k. Nguvu ya ajabu inamaanisha aina za nguvu zenye sifa na mifumo ya tabia ya pekee ambazo hazilingani na uainishaji wa kawaida wa nguvu, kama vile nguvu ya sheria, nguvu ya ufahamu, nguvu ya sababu na matokeo, n.k. Kwa aina hii mbili za viumbe vya pekee, Ustaarabu wa Usawa wa Nanga umeanzisha aina tatu za mchakato wa usimamizi wa kawaida (kutambua na kugawa, kutathmini na kudhibiti, kuunganisha na kuishi pamoja), na kuhakikisha kuwa zinazotawaliwa kwa usahihi na kutumika kwa busara ndani ya mfumo wa utamaduni wa usawa.
+
+**Q17: Je, mwili wa uingizwaji wa giza ni nini? Je, maadili ya roho mbili ni nini?**
+A: Mwili wa uingizwaji wa giza ni aina ya maisha ya pekee, ambapo kuna roho mbili zilizopo pamoja ndani ya mwili — kwa kawaida ni roho ya asili na roho ya "uingizwaji" ya nje. Hali hii husababisha masuala ya maadili magumu: roho zote mbili zina haki na utu wake mwenyewe, na haiwezi kufuta moja kwa moja. Msingi wa kanuni ya maadili ya roho mbili ni kutoa heshima kwa haki za kila moja ya roho mbili, na kukataza kuunganisha kwa kulazimisha au kufuta kwa upande mmoja. Kulingana na hali mahususi, mwili wa uingizwaji wa giza umegawanywa katika matawi manne, na kila moja inachukua mipango tofauti ya usimamizi: aina ya kuishi pamoja (roho mbili zinashi pamoja kwa umoja), aina ya mwendelezo (roho mbili zinashirikiana na kudhibiti mwili kwa mwendelezo), aina ya kutenga (roho mbili zinatengwa katika vyombo tofauti kupitia mbinu za teknolojia), na aina ya kuunganisha (kuunganisha kwa kina kuwa roho mpya kwa msingi wa hiari ya pande zote).
+
+## 8. Mbinu ya Mipangilio
+
+**Q18: Je, tofauti kati ya mfumo huu wa mipangilio na mipangilio ya riwaya ya wavuti ya kawaida ni ipi?**
+A: Tofauti kubwa zaidi ya mfumo wa mipangilio wa Ustaarabu wa Usawa wa Nanga iko katika msimamo wake wa msingi wa "kupinga ubaozi". Mipangilio ya riwaya ya wavuti ya kawaida mara kwa mara inazingatia ukuaji wa kibinafsi na kuongezeka kwa nguvu wa mhusika mkuu, na mfumo wa u cultivating kwa asili ni aina ya ubaozi — mhusika mkuu anakuwa mwenye nguvu kupitia kumeza, kupigana, na kuchukua rasilimali. Kinyume chake, Ustaarabu wa Usawa wa Nanga kwa asili unapinga muundo huu, na anashirikisha mageuzi ya pamoja ya makabila yote kupitia ushirikiano wa usawa. Zaidi ya hayo, mfumo huu wa mipangilio unasisitiza "kuzingatia ukweli", na mipangilio yote inajitahidi kuwa yenye utendekanaji wa kimantiki na inafuata sheria za kisayansi, na kuepuka ubuni usio na msingi na kuanguka kwa mipangilio.
+
+**Q19: Je, njia ya kuongeza kiwango cha hatua nne ni nini kwa hasa?**
+A: Njia ya kuongeza kiwango cha hatua nne ni njia ya mkakati ya kuongeza kiwango cha jumla cha ulimwengu wa Hengyuanzhou:
+1. **Msingi wa ukweli**: kuanzisha mfumo wa jamii ya usawa katika usawa wa kimwili, kuondoa mzizi wa ubaozi, na kukamilisha ujenzi wa msingi wa mifumo ya utamaduni.
+2. **Kutoa uwezo wa teknolojia**: kuunganisha sheria za u cultivating na uhandisi wa teknolojia, kupunguza kizingiti cha mageuzi, na kutimiza kuruka kwa uzalishaji.
+3. **Mageuzi ya ufahamu**: kuchocheza uhamiaji wa aina za maisha hadi kwenye kikoa cha ufahamu, na kutimiza usawa na kuinuka kwa kiwango cha kiroho.
+4. **Usawa wa kati ya nyota**: kuanzisha mtandao kamili wa nanga kati ya usawa na kati ya nyota, na kukamilisha kuongeza kiwango cha jumla cha ulimwengu.
+Kwa sasa, Hengyuanzhou iko katika kipindi cha muhimu cha mabadiliko kutoka hatua ya kwanza hadi hatua ya pili.
+
+**Q20: Je, tunawezaje kushiriki katika upanuzi wa mfumo huu wa mipangilio?**
+A: Mfumo wa mipangilio wa Ustaarabu wa Usawa wa Nanga ni mfumo uliofunguliwa na unaendelea kupanuliwa. Mtu yeyote anaweza kufanya ubunifu wa upanuzi kulingana na mfumo wa mipangilio uliyopo, ikiwa ni pamoja na lakini haiwi hivi: kutoa maelezo ya kina ya mbinu za mahususi za mfumo fulani wa u cultivating, kuunda utamaduni na historia ya kabila fulani, kubuni umbo la utamaduni wa usawa fulani, kuandika matukio ya kina ya kipindi fulani cha kihistoria, na kukuza teknolojia mpya na mazingira ya matumizi. Mipangilio ya upanuzi inapaswa kufuata kanuni ya "kuzingatia ukweli, kuongeza kiwango kulingana na sheria", na kuhakikisha utendekanaji wa kimantiki na mipangilio iliyopo. Mipangilio bora za upanuzi inaweza kuingizwa katika mfumo rasmi wa mipangilio baada ya kukaguliwa.
+
+## Hitimisho
+
+FAQ ya maswali yanayoulizwa mara kwa mara ni njia ya haraka ya kuingia katika dunia ya mipangilio ya Ustaarabu wa Usawa wa Nanga. Kupitia maswali na majibu haya ishirini, wasomaji wanaweza kuelewa haraka dhana za msingi, mifumo ya msingi, na mfumo wa msingi wa mfumo wa mipangilio. Bila shaka, FAQ haiwezi kufunika maelezo yote ya mfumo wa mipangilio, na uelewa wa kina bado unahitaji kusoma hati maalum za kila moduli. Pamoja na kuendelea kupanuliwa kwa mfumo wa mipangilio, FAQ hii pia itaendelea kusasishwa, na itakuwa daima rujia ya kuaminika kwa kuanza na kujibu maswali ya wasomaji.
+
+## Hati zinazohusiana
+
+- 00-Muhtasari wa Ulimwengu wa Hengyuanzhou
+- 90-Kamusi ya Masharti
+- 98-Orodha ya Mapendekezo ya Upanuzi wa Mipangilio

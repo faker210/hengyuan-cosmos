@@ -1,0 +1,104 @@
+# Câu hỏi Thường gặp FAQ
+
+| Mục | Nội dung |
+|-----|----------|
+| Số tài liệu | 96 |
+| Mô-đun | Phụ lục và Tài liệu Tham khảo |
+| Từ khóa chính | câu hỏi thường gặp, FAQ, giải đáp thắc mắc, làm rõ cài đặt, hướng dẫn giới thiệu |
+
+## 1. Mô tả
+
+Tài liệu này chứa các câu hỏi thường gặp và câu trả lời về hệ thống cài đặt của Văn minh Cộng sinh Mỏ neo, được phân loại và sắp xếp theo chủ đề. Các câu hỏi bao gồm các khía cạnh khác nhau như khái niệm cốt lõi của thế giới quan, hệ thống tu luyện, thể chế xã hội, hệ thống pháp luật, tương tác giữa các mặt phẳng và quy tắc thời gian. Mục tiêu của tài liệu này là cung cấp hướng dẫn giới thiệu nhanh chóng cho độc giả lần đầu tiên tiếp xúc với cài đặt của Văn minh Cộng sinh Mỏ neo, đồng thời cung cấp câu trả lời có thẩm quyền cho các thắc mắc thường gặp cho các nhà nghiên cứu sâu. Tài liệu này là tài liệu cập nhật động; với phản hồi của độc giả, các câu hỏi và câu trả lời mới sẽ được liên tục bổ sung.
+
+## 2. Thế giới quan và Khái niệm Cốt lõi
+
+**Q1: Khẳng định cốt lõi của Văn minh Cộng sinh Mỏ neo là gì?**
+A: Khẳng định cốt lõi của Văn minh Cộng sinh Mỏ neo là "chống cướp bóc, ủng hộ cộng sinh". Cụ thể, nó phản đối hệ thống tu luyện kiểu cướp bóc, vốn lấy việc nuốt chửng năng lượng, vận khí và thậm chí nguồn gốc của kẻ yếu làm giá cả, và ủng hộ việc tiến hóa chung thông qua hợp tác cộng sinh. Khái niệm cốt lõi của văn minh là "trả lại quyền lựa chọn số phận và tiến hóa cho tất cả các sinh vật", và chính sách cơ bản là "lao động nhiều được nhiều, tự sinh tự trưởng, mọi người đều có con đường, tất cả các chủng tộc cùng tiến bộ".
+
+**Q2: Nguyên tắc "dựa trên thực tế" có nghĩa là gì?**
+A: "Dựa trên thực tế" là một trong những lập trường cơ bản của Văn minh Cộng sinh Mỏ neo, chỉ ra rằng thế giới thực là thế giới thực duy nhất, và thế giới tiểu thuyết là một thí nghiệm tư tưởng giả mạo. Trong việc xây dựng cài đặt, các phần hư cấu không đủ được bổ sung bằng thực tế, và những thứ không tồn tại trong thực tế được nâng cấp và tạo ra dựa trên quy luật khách quan. Nguyên tắc này đảm bảo tính tự nhất quán logic và tính cảm nhận thực tế của hệ thống cài đặt, tránh sự sụp đổ của cài đặt do tưởng thuần túy.
+
+**Q3: Mối quan hệ giữa Hengyuanzhou và vũ trụ là gì?**
+A: Tên đầy đủ của Hengyuanzhou là "Wan Ling Heng Mao Ben Yuan Zhou", là toàn bộ vũ trụ mà Văn minh Cộng sinh Mỏ neo sinh sống và cai trị. Nó không phải là một vũ trụ vật lý đơn lẻ theo nghĩa thông thường, mà là một thực thể tổng hợp được cấu thành bởi bốn tầng: mặt phẳng vật chất, tầng năng lượng, miền ý thức và mạng lưới quy luật. Có thể hiểu rằng Hengyuanzhou là một hệ thống vũ trụ siêu cấp chứa đựng vô số mặt phẳng và sử dụng cơ chế mỏ neo làm phương tiện điều tiết cốt lõi.
+
+## 3. Hệ thống Tu luyện
+
+**Q4: Ba trăm bộ hệ thống tu luyện nguồn gốc đến từ đâu?**
+A: Ba trăm bộ hệ thống không phải là các pháp tu luyện được tạo ra một cách nhân tạo, mà là các con đường tu luyện chính thống được trích xuất trực tiếp từ quy luật nguồn gốc vũ trụ và được xác minh bởi mỏ neo. Trong giai đoạn thành lập hệ thống cộng sinh, đội ngũ do "San Baishi" lãnh đạo đã tiến hành khai quật và sắp xếp có hệ thống các quy luật vũ trụ, và cuối cùng đã tổng hợp ra ba trăm bộ hệ thống tu luyện bao phủ tất cả các chiều kích tiến hóa. Các hệ thống này được chia thành sáu hạng mục: hạng mục suy luận nguồn gốc, hạng mục chu kỳ sống, hạng mục quy luật không gian, hạng mục nâng chiều không gian ý thức, hạng mục mạng lưới cộng sinh và hạng mục kỹ thuật ứng dụng, với năm mươi bộ trong mỗi hạng mục.
+
+**Q5: Tại sao ba bộ hệ thống đầu tiên được gọi là "ba nền tảng nguồn gốc"?**
+A: Ba bộ hệ thống đầu tiên — lặp lại suy luận (bộ thứ 1), chu kỳ sống (bộ thứ 2) và điều phối quy luật không gian (bộ thứ 3) — là nền tảng tu luyện của tất cả các hệ thống khác. Hệ thống lặp lại suy luận cung cấp nền tảng trí tuệ và phương pháp luận, hệ thống chu kỳ sống cung cấp nền tảng năng lượng sống, và hệ thống điều phối quy luật không gian cung cấp nền tảng vận hành không gian và quy luật. Đề xuất rằng những người tu luyện của bất kỳ hệ thống khác nào nên thực hành ít nhất một trong ba nền tảng nguồn gốc trước tiên, để thiết lập một nền tảng tiến hóa vững chắc.
+
+**Q6: Quả Bei Zeng là gì? Mối quan hệ của nó với One Piece là gì?**
+A: Quả Bei Zeng là một trong những "buff khởi đầu" của Văn minh Cộng sinh Mỏ neo, có nguồn gốc từ cài đặt quả Bei Zeng trong thế giới One Piece. Ở Hengyuanzhou, quả Bei Zeng được áp dụng một cách công nghệ, có khả năng nâng cao khả năng suy luận của người tu luyện lên trăm lần, và là công cụ hỗ trợ cốt lõi của hệ thống lặp lại suy luận. Cài đặt này phản ánh nguyên tắc "bổ sung phần hư cấu không đủ bằng thực tế, nâng cấp và tạo ra những thứ không tồn tại trong thực tế dựa trên quy luật" — kết hợp các cài đặt thú vị từ tác phẩm hư cấu vào hệ thống công nghệ của văn minh cộng sinh sau khi biến đổi theo quy luật.
+
+**Q7: Chiến lược kích hoạt 20% là gì? Tại sao là 20%?**
+A: Chiến lược kích hoạt 20% là mục tiêu chiến lược theo giai đoạn của Văn minh Cộng sinh Mỏ neo, nhằm mục đích kích hoạt 20% tất cả các sinh vật của toàn vũ trụ thành những người mạnh nhất mặt phẳng trong giai đoạn đầu. Việc lựa chọn tỷ lệ 20% dựa trên phân tích động lực học của mạng lưới cộng sinh — khi 20% các nút trong mạng lưới đạt đến trạng thái năng lượng cao, hiệu ứng cộng hưởng tổng thể của mạng lưới sẽ kích hoạt một điểm tới hạn, thúc đẩy tiến hóa tăng tốc của 80% các nút còn lại. 20% những người mạnh nhất mặt phẳng này sẽ hoạt động như lực lượng xương sống, đóng vai trò cốt lõi trong việc duy trì mỏ neo, hướng dẫn của cố vấn và xây dựng văn minh.
+
+## 4. Thể chế Xã hội và Pháp luật
+
+**Q8: Năm loại phân loại văn minh cộng sinh là gì?**
+A: Năm loại phân loại văn minh cộng sinh là năm loại xã hội cộng sinh được phân loại dựa trên đặc điểm của các văn minh trong thế giới thực, bao gồm: loại tập trung Đông Á (đặc trưng bởi tổ chức hiệu quả và chủ nghĩa tập thể), loại phúc lợi Bắc Âu (đặc trưng bởi phúc lợi cao và bình đẳng xã hội), loại đa dạng Bắc Mỹ (đặc trưng bởi đa văn hóa và sức sống đổi mới), loại xã hội lục địa châu Âu (đặc trưng bởi kinh tế thị trường xã hội và sự tham gia của lao động), và loại bắt kịp đang phát triển (đặc trưng bởi phát triển nhanh và lợi thế muộn). Năm loại phân loại này không phải là phân loại loại trừ lẫn nhau, mà là các mô hình tham khảo có thể học hỏi lẫn nhau và phát triển một cách tích hợp.
+
+**Q9: Cơ chế hợp đồng sản xuất chung hoạt động như thế nào?**
+A: Cơ chế hợp đồng sản xuất chung là hệ thống phân bổ nguồn lực cốt lõi của Văn minh Cộng sinh Mỏ neo, lấy cảm hứng từ hệ thống trách nhiệm hợp đồng sản xuất chung gia đình trong thế giới thực. Cách thức hoạt động của nó là: phân bổ nguồn lực tu luyện vũ trụ cho cá nhân hoặc tập thể theo cách "hợp đồng", và người ký hợp đồng có được quyền sử dụng và quyền lợi từ nguồn lực thông qua lao động và đóng góp. Lao động nhiều được nhiều, và đóng góp càng lớn thì nguồn lực thu được càng nhiều. Cơ chế này không chỉ đảm bảo phân bổ công bằng nguồn lực, mà còn kích thích sự tích cực trong lao động của cá nhân, thực hiện sự thống nhất giữa công bằng và hiệu quả.
+
+**Q10: Mối quan hệ giữa Hiến pháp Cộng sinh và luật thông thường là gì?**
+A: Hiến pháp Cộng sinh là luật pháp cơ bản của Văn minh Cộng sinh Mỏ neo, có hiệu lực pháp luật cao nhất. Tất cả các luật, quy định hành chính và quy định địa phương không được mâu thuẫn với Hiến pháp. Luật Lao động Cộng sinh, Luật Bảo vệ Người tiêu dùng và năm luật bổ sung về giáo dục, y tế, nhà ở, môi trường và chống độc quyền đều là các luật ngành được ban hành dựa trên Hiến pháp Cộng sinh làm cơ sở lập pháp, chịu trách nhiệm cụ thể hóa và vận hành được các quy định nguyên tắc của Hiến pháp. Tòa án Cộng sinh có quyền thực hiện xem xét vi hiến đối với các luật vi phạm Hiến pháp và tuyên bố chúng vô hiệu.
+
+## 5. Tương tác Giữa các Mặt phẳng
+
+**Q11: Kế hoạch khảo cổ "gương sao chép + không gian cách ly + chỉ truyền lại kiến thức" là gì?**
+A: Đây là kế hoạch tiêu chuẩn cho khảo cổ giữa các mặt phẳng và hồi quy thời gian của Văn minh Cộng sinh Mỏ neo, bao gồm ba yếu tố cốt lõi:
+1. **Gương sao chép**: thực hiện sao chép hoàn chỉnh 1:1 của mục tiêu khảo cổ mà không tiếp xúc với đối tượng gốc, và quá trình sao chép không thay đổi bất kỳ trạng thái nào của đối tượng gốc.
+2. **Không gian cách ly**: bản sao được tạo ra trong một không gian độc lập hoàn toàn cách ly với mục tiêu, và các nhà khảo cổ thực hiện tất cả các hoạt động nghiên cứu bên trong không gian cách ly.
+3. **Chỉ truyền lại kiến thức**: sau khi khảo cổ kết thúc, chỉ có kiến thức và thông tin trừu tượng mới có thể được truyền lại; vật chất và năng lượng của bản sao phải bị phá hủy bên trong không gian cách ly, và không được mang trở lại mặt phẳng của chính mình.
+Kế hoạch này đảm bảo không can thiệp vào quá trình khảo cổ đối với mặt phẳng mục tiêu hoặc giai đoạn mục tiêu, đồng thời ngăn chặn ô nhiễm giữa các mặt phẳng.
+
+**Q12: Tại sao phải tuân theo nguyên tắc "quan sát trước, sau đó can thiệp hạn chế"?**
+A: Khái niệm cốt lõi của nguyên tắc này là "khiêm tốn nhận thức" — ngay cả những người mạnh nhất mặt phẳng cũng không thể nắm vững hoàn toàn tất cả các mối quan hệ nhân quả của một nút thời gian hoặc một văn minh mặt phẳng. Bất kỳ can thiệp trực tiếp nào vào quá khứ hoặc mặt phẳng khác đều có thể gây ra phản ứng chuỗi nhân quả không thể dự đoán. Do đó, trước tiên phải thực hiện quan sát toàn diện với thái độ thận trọng nhất, và chỉ dưới tiền đề dữ liệu quan sát đủ và đánh giá rủi ro rõ ràng, can thiệp hạn chế với phạm vi và mức độ được giới hạn nghiêm ngặt mới được phép. Nguyên tắc này là đảm bảo cơ bản cho sự an toàn của các hoạt động hồi quy thời gian và giữa các mặt phẳng.
+
+**Q13: Cần những điều kiện gì để du hành giữa các mặt phẳng?**
+A: Du hành giữa các mặt phẳng cần đáp ứng các điều kiện sau: thứ nhất, người du hành phải có tu luyện ở cấp độ thứ ba (Hua Kong Jing) trở lên của hệ thống điều phối quy luật không gian, hoặc mang theo phương tiện du hành đáp ứng tiêu chuẩn; thứ hai, phải có được giấy phép du hành cấp độ tương ứng do Cục Quản lý Mặt phẳng cấp (cấp độ A quan sát khảo cổ, cấp độ B trao đổi học thuật, cấp độ C hợp tác nguồn lực, cấp độ D can thiệp khẩn cấp); thứ ba, cả điểm bắt đầu và điểm kết thúc của du hành đều phải có mỏ neo để hiệu chỉnh tọa độ; thứ tư, phải hoàn thành quy trình thanh lọc ba cấp độ (thanh lọc sinh học, thanh lọc năng lượng, thanh lọc ý thức); thứ năm, năng lượng du hành phải do bản thân mang theo, và bị cấm trích xuất từ mặt phẳng mục tiêu.
+
+## 6. Quy tắc Thời gian
+
+**Q14: Sự khác biệt giữa hồi quy thời gian và du hành thời gian là gì?**
+A: Trong cài đặt của Hengyuanzhou, hồi quy thời gian không giống với du hành thời gian. Người hồi quy thời gian không đi vào quá khứ dưới dạng vật chất hoàn chỉnh, mà đến nút thời gian mục tiêu dưới dạng chiếu ý thức hoặc gói thông tin. Sự tồn tại của người hồi quy trong giai đoạn quá khứ là "bán trong suốt" — có thể quan sát, nhưng khả năng tương tác vật chất bị giới hạn nghiêm ngặt. Bản thân thiết kế này là một phần của cơ chế an toàn hồi quy thời gian, làm giảm khả năng người hồi quy gây ra can thiệp vật chất vào quá khứ.
+
+**Q15: Có những loại nghịch lý thời gian nào? Làm thế nào để phòng ngừa?**
+A: Nghịch lý thời gian được chia thành bốn hạng mục chính: nghịch lý ông nội (hành vi của người hồi quy làm cho các điều kiện nhân quả của sự tồn tại của chính mình bị loại bỏ), nghịch lý thông tin (thông tin được truyền lại từ tương lai về quá khứ tạo thành một vòng tuần hoàn thông tin không có nguồn), nghịch lý bản thể (sự tương tác của người hồi quy với chính mình trong quá khứ gây ra sự hỗn loạn ý thức bản thể), và nghịch lý sự kiện (người hồi quy thay đổi các sự kiện lịch sử quan trọng, gây ra tái cấu trúc chuỗi nhân quả). Cơ chế phòng ngừa bao gồm: đánh giá nhân quả trước hồi quy và cách ly nhân quả của người hồi quy trước sự kiện, hệ thống danh sách trắng hành vi can thiệp, giám sát nhân quả thời gian thực và phản ứng khẩn cấp ba cấp độ trong sự kiện, sửa chữa nhân quả và kiểm toán sau sự kiện. Mục tiêu của toàn bộ hệ thống phòng ngừa là loại bỏ nghịch lý ở trạng thái phôi thai.
+
+## 7. Sự sống và Chủng tộc
+
+**Q16: Sự sống kỳ lạ và năng lượng kỳ lạ là gì?**
+A: Sự sống kỳ lạ đề cập đến các dạng sự sống có hình thức tồn tại đặc biệt không phù hợp với định nghĩa sự sống thông thường, ví dụ như sự sống năng lượng thuần túy, sự sống dạng ý thức, sự sống cơ học, v.v. Năng lượng kỳ lạ đề cập đến các dạng năng lượng có thuộc tính và mô hình hành vi đặc biệt không phù hợp với phân loại năng lượng thông thường, ví dụ như năng lượng quy luật, năng lượng ý thức, năng lượng nhân quả, v.v. Đối với hai loại thực thể đặc biệt này, Văn minh Cộng sinh Mỏ neo đã thiết lập ba loại quy trình xử lý tiêu chuẩn hóa (nhận dạng và phân loại, đánh giá và kiểm soát, hợp nhất và cộng sinh), đảm bảo rằng chúng được quản lý thích hợp và sử dụng hợp lý trong khuôn khổ văn minh cộng sinh.
+
+**Q17: Thể thay thế bóng tối là gì? Đạo đức linh hồn kép là gì?**
+A: Thể thay thế bóng tối là một dạng sự sống đặc biệt, trong đó có hai linh hồn tồn tại đồng thời trong cơ thể — thường là linh hồn gốc và một linh hồn "thay thế" ngoại lai. Trạng thái này gây ra các vấn đề đạo đức phức tạp: cả hai linh hồn đều có quyền và nhân cách riêng của mình, và không thể đơn giản loại bỏ một trong số chúng. Cốt lõi của quy tắc đạo đức linh hồn kép là tôn trọng quyền riêng của cả hai linh hồn, cấm hợp nhất cưỡng bức hoặc loại bỏ một phía. Dựa trên tình huống cụ thể, thể thay thế bóng tối được chia thành bốn nhánh, mỗi nhánh áp dụng các kế hoạch xử lý khác nhau: loại đồng tồn tại (cả hai linh hồn đồng tồn tại một cách hài hòa), loại luân phiên (cả hai linh hồn luân phiên kiểm soát cơ thể), loại tách rời (tách hai linh hồn thành các phương tiện khác nhau thông qua các phương tiện kỹ thuật), và loại hợp nhất (hợp nhất sâu thành linh hồn mới trên cơ sở tự nguyện của cả hai bên).
+
+## 8. Phương pháp luận Cài đặt
+
+**Q18: Sự khác biệt giữa hệ thống cài đặt này và cài đặt tiểu thuyết web thông thường là gì?**
+A: Sự khác biệt lớn nhất của hệ thống cài đặt Văn minh Cộng sinh Mỏ neo nằm ở lập trường cốt lõi "chống cướp bóc" của nó. Cài đặt tiểu thuyết web thông thường thường xoay quanh sự phát triển cá nhân và tăng cường sức mạnh của nhân vật chính, và hệ thống tu luyện về bản chất là kiểu cướp bóc — nhân vật chính trở nên mạnh mẽ thông qua việc nuốt chửng, chiến đấu và giành giật nguồn lực. Ngược lại, Văn minh Cộng sinh Mỏ neo về cơ bản phản đối mô hình này, và ủng hộ tiến hóa chung của tất cả các chủng tộc thông qua hợp tác cộng sinh. Ngoài ra, hệ thống cài đặt này nhấn mạnh "dựa trên thực tế", và tất cả các cài đặt đều cố gắng tự nhất quán về mặt logic và phù hợp với quy luật khách quan, tránh tưởng thuần túy và sự sụp đổ của cài đặt.
+
+**Q19: Con đường nâng chiều không gian bốn giai đoạn cụ thể là gì?**
+A: Con đường nâng chiều không gian bốn giai đoạn là lộ trình chiến lược cho việc nâng chiều không gian tổng thể của vũ trụ Hengyuanzhou:
+1. **Nền tảng thực tế**: thiết lập hệ thống xã hội cộng sinh ở mặt phẳng vật chất, loại bỏ gốc rễ của cướp bóc, hoàn thành xây dựng nền tảng thể chế của văn minh.
+2. **Trao quyền công nghệ**: kết hợp quy luật tu luyện với kỹ thuật công nghệ, giảm ngưỡng tiến hóa, thực hiện bước nhảy vọt về năng suất.
+3. **Tiến hóa ý thức**: thúc đẩy sự di chuyển của các dạng sự sống sang miền ý thức, thực hiện cộng sinh và thăng hoa ở cấp độ tinh thần.
+4. **Cộng sinh liên sao**: thiết lập mạng lưới mỏ neo hoàn chỉnh giữa các mặt phẳng và giữa các vì sao, hoàn thành việc nâng chiều không gian tổng thể của vũ trụ.
+Hiện tại, Hengyuanzhou đang trong giai đoạn then chốt của quá trình chuyển đổi từ giai đoạn thứ nhất sang giai đoạn thứ hai.
+
+**Q20: Làm thế nào để tham gia vào việc mở rộng hệ thống cài đặt này?**
+A: Hệ thống cài đặt Văn minh Cộng sinh Mỏ neo là một hệ thống mở và liên tục được mở rộng. Bất kỳ ai cũng có thể thực hiện sáng tạo mở rộng dựa trên khuôn khổ cài đặt hiện có, bao gồm nhưng không giới hạn ở: chi tiết hóa các pháp môn cụ thể của một hệ thống tu luyện nhất định, sáng tạo văn hóa và lịch sử của một chủng tộc nhất định, thiết kế dạng văn minh của một mặt phẳng nhất định, viết các sự kiện chi tiết của một giai đoạn lịch sử nhất định, phát triển các công nghệ mới và kịch bản ứng dụng. Các cài đặt mở rộng nên tuân theo nguyên tắc "dựa trên thực tế, nâng cấp theo quy luật", đảm bảo tính tự nhất quán logic với các cài đặt hiện có. Các cài đặt mở rung xuất sắc có thể được kết hợp vào hệ thống cài đặt chính thức sau khi được xem xét.
+
+## Kết luận
+
+FAQ câu hỏi thường gặp là lối vào nhanh chóng để bước vào thế giới cài đặt của Văn minh Cộng sinh Mỏ neo. Thông qua hai mươi câu hỏi và câu trả lời này, độc giả có thể nhanh chóng nắm bắt các khái niệm cốt lõi, cơ chế then chốt và khuôn khổ cơ bản của hệ thống cài đặt. Tất nhiên, FAQ không thể bao gồm tất cả các chi tiết của hệ thống cài đặt, và sự hiểu biết sâu sắc vẫn đòi hỏi việc đọc các tài liệu chuyên biệt của từng mô-đun. Với sự phong phú liên tục của hệ thống cài đặt, FAQ này cũng sẽ liên tục được cập nhật, luôn đóng vai trò là tài liệu tham khảo đáng tin cậy cho việc giới thiệu và giải đáp thắc mắc của độc giả.
+
+## Tài liệu Liên quan
+
+- 00-Tổng quan Vũ trụ Hengyuanzhou
+- 90-Từ điển Thuật ngữ
+- 98-Danh sách Đề xuất Mở rộng Cài đặt

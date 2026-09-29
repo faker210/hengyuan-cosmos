@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>翻译进度看板 · 衡元宙文库</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --panel: #101a30;
+    --panel2: #131e38;
+    --line: #22304f;
+    --line2: #2c3d63;
+    --text: #e6e9f2;
+    --muted: #8a94ad;
+    --gold: #f0c06a;
+    --green: #3ddc97;
+    --green-bg: rgba(61, 220, 151, 0.12);
+    --gold-bg: rgba(240, 192, 106, 0.12);
+    --gray: #4a5570;
+    --gray-bg: rgba(74, 85, 112, 0.18);
+    --blue: #7aa2f7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.55; }
+  body { min-height: 100vh; }
+
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
+
+  /* ---------- 头部 ---------- */
+  header.top { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 24px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .logo { width: 34px; height: 34px; flex: none; }
+  h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.5px; }
+  h1 .sub { font-size: 13px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .meta { font-size: 12px; color: var(--muted); text-align: right; }
+  .meta b { color: var(--gold); font-weight: 600; }
+
+  /* ---------- 统计卡 ---------- */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .stat .v { font-size: 26px; font-weight: 700; }
+  .stat .k { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .stat .v.done { color: var(--green); }
+  .stat .v.progress { color: var(--gold); }
+  .stat .v.todo { color: var(--muted); }
+
+  .overall { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 24px; }
+  .overall .row { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
+  .overall .row b { color: var(--text); }
+  .bar { height: 10px; background: var(--panel2); border: 1px solid var(--line2); border-radius: 6px; overflow: hidden; display: flex; }
+  .bar i { display: block; height: 100%; }
+  .bar .b-done { background: linear-gradient(90deg, #2bbf8b, var(--green)); }
+  .bar .b-progress { background: linear-gradient(90deg, #d9a44a, var(--gold)); }
+  .bar .b-todo { background: var(--gray); }
+
+  /* ---------- 当前批次 ---------- */
+  .batch { background: linear-gradient(135deg, rgba(240,192,106,0.10), rgba(122,162,247,0.08)), var(--panel); border: 1px solid var(--line2); border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .batch .bt { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+  .batch .bt h2 { font-size: 17px; font-weight: 700; }
+  .tag { display: inline-block; background: var(--gold-bg); color: var(--gold); border: 1px solid rgba(240,192,106,0.4); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; letter-spacing: 1px; }
+  .batch .bd { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+  .batch .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px 16px; }
+  .blang { display: grid; grid-template-columns: 58px 1fr 42px; align-items: center; gap: 8px; font-size: 12.5px; }
+  .blang .code { color: var(--text); font-weight: 600; }
+  .blang .bline { height: 6px; background: var(--panel2); border-radius: 4px; overflow: hidden; }
+  .blang .bline i { display: block; height: 100%; background: var(--green); border-radius: 4px; }
+  .blang .cnt { color: var(--muted); text-align: right; }
+  .blang .cnt b { color: var(--green); font-weight: 600; }
+
+  /* ---------- 工具栏 ---------- */
+  .toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+  .toolbar .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip { border: 1px solid var(--line2); background: var(--panel); color: var(--muted); font-size: 12.5px; padding: 5px 12px; border-radius: 20px; cursor: pointer; user-select: none; transition: all .15s; }
+  .chip:hover { border-color: var(--blue); color: var(--text); }
+  .chip.on { background: var(--gold); border-color: var(--gold); color: #1a1406; font-weight: 600; }
+  .chip.s-done.on { background: var(--green); border-color: var(--green); color: #06281a; }
+  .chip.s-todo.on { background: var(--gray); border-color: var(--gray); color: #eef; }
+  input.search { flex: 1; min-width: 200px; background: var(--panel); border: 1px solid var(--line2); color: var(--text); border-radius: 10px; padding: 7px 12px; font-size: 13px; outline: none; }
+  input.search:focus { border-color: var(--blue); }
+  input.search::placeholder { color: var(--muted); }
+
+  /* ---------- 模块与表格 ---------- */
+  .module { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+  .module.collapsed .mtab { cursor: pointer; }
+  .mtab { display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .mtab .arrow { color: var(--muted); font-size: 11px; transition: transform .15s; width: 10px; }
+  .module.collapsed .mtab .arrow { transform: rotate(-90deg); }
+  .mtab .mname { font-weight: 700; font-size: 14.5px; }
+  .mtab .mrange { color: var(--muted); font-size: 12px; }
+  .mtab .mprog { margin-left: auto; display: flex; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); }
+  .mtab .mprog b.d { color: var(--green); }
+  .mtab .mprog b.p { color: var(--gold); }
+  .mtab .ml { width: 120px; height: 6px; background: var(--panel2); border-radius: 4px; overflow: hidden; }
+  .mtab .ml i { display: block; height: 100%; background: var(--green); }
+
+  .tbl-wrap { overflow-x: auto; }
+  table.tbl { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .tbl th, .tbl td { padding: 7px 8px; border-bottom: 1px solid rgba(34,48,79,0.5); white-space: nowrap; }
+  .tbl thead th { position: sticky; top: 0; background: var(--panel2); color: var(--muted); font-weight: 600; font-size: 11.5px; z-index: 2; text-align: center; }
+  .tbl thead th.doc { text-align: left; }
+  .tbl td.num { color: var(--gold); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tbl td.title { color: var(--text); max-width: 300px; overflow: hidden; text-overflow: ellipsis; }
+  .tbl td.lang { text-align: center; }
+  .tbl td.lang .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: middle; }
+  .dot.done { background: var(--green); box-shadow: 0 0 6px rgba(61,220,151,0.5); }
+  .dot.progress { background: var(--gold); box-shadow: 0 0 6px rgba(240,192,106,0.5); }
+  .dot.todo { background: var(--gray); }
+  td.lang .dot:hover { transform: scale(1.4); }
+  tr:hover td { background: rgba(122,162,247,0.05); }
+  tr.hide { display: none; }
+  tr.cur td { background: rgba(240,192,106,0.06); }
+  tr.cur td.num { color: #fff; }
+  .tbl td.lang.dim { opacity: 0.35; }
+  .legend { display: flex; gap: 16px; font-size: 12px; color: var(--muted); padding: 10px 16px; flex-wrap: wrap; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+  .empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: 13px; }
+
+  footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 18px; }
+  footer a { color: var(--blue); text-decoration: none; }
+
+  @media (max-width: 760px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .wrap { padding: 20px 12px 60px; }
+    h1 { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0b1220"/><path d="M16 5v18M10 11l6-6 6 6M7 23h18" stroke="#f0c06a" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      <div>
+        <h1>衡元宙 · 翻译进度看板</h1>
+        <div class="sub">万灵衡锚本源宙设定文库 · 100 篇宪章文档 × 15 语种</div>
+      </div>
+    </div>
+    <div class="meta">数据生成：<b id="genTime">-</b><br/>数据源：status.json（本地静态）</div>
+  </header>
+
+  <section class="stats">
+    <div class="stat"><div class="v">100</div><div class="k">宪章文档（00-99）</div></div>
+    <div class="stat"><div class="v">15</div><div class="k">语种</div></div>
+    <div class="stat"><div class="v done" id="statDone">-</div><div class="k">已完成（done）</div></div>
+    <div class="stat"><div class="v todo" id="statTodo">-</div><div class="k">待翻译（todo）</div></div>
+  </section>
+
+  <section class="overall">
+    <div class="row"><span>总体进度（<b id="totalDone">-</b> / <b id="totalUnits">-</b> 单元）</span><span id="totalPct">-</span></div>
+    <div class="bar"><i class="b-done" id="barDone"></i><i class="b-progress" id="barProgress"></i><i class="b-todo" id="barTodo"></i></div>
+  </section>
+
+  <section class="batch" id="batch">
+    <div class="bt"><h2>当前批次：30~39 文明分型与社会制度</h2><span class="tag">进行中批次</span></div>
+    <div class="bd">八个推进中语种（bn / de / id / ja / pt / sw / ur / vi）正在 30~39 批次逐篇推进，下方为该批次各语种完成情况；点击表格模块可查看全量。</div>
+    <div class="grid" id="batchGrid"></div>
+  </section>
+
+  <section class="toolbar">
+    <div class="chips" id="langChips"></div>
+    <div class="chips" id="statusChips">
+      <span class="chip s-all on" data-s="all">全部状态</span>
+      <span class="chip s-done" data-s="done">已完成</span>
+      <span class="chip s-progress" data-s="progress">进行中</span>
+      <span class="chip s-todo" data-s="todo">待翻译</span>
+    </div>
+    <input class="search" id="search" type="text" placeholder="搜索编号或标题，如 35 / 共生教育" />
+  </section>
+
+  <div id="modules"></div>
+
+  <footer>
+    衡元宙（万灵衡锚本源宙）官方设定文库 · 翻译进度看板 · 反掠夺 · 倡共生 · 万族共进<br/>
+    状态判定：文件存在且达到原文 20% 以上视为「已完成」，占位空壳视为「进行中」，缺失视为「待翻译」。
+  </footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var STATUS = { done: '已完成', progress: '进行中', todo: '待翻译' };
+  var CUR_START = 30, CUR_END = 39;
+
+  var state = { lang: 'all', status: 'all', q: '' };
+  var data = null;
+
+  function $(id) { return document.getElementById(id); }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function fmtTime(iso) {
+    try {
+      return new Date(iso).toLocaleString('zh-CN', { hour12: false });
+    } catch (e) { return iso; }
+  }
+
+  function renderMeta() {
+    var s = data.summary;
+    $('genTime').textContent = fmtTime(data.generatedAt);
+    $('statDone').textContent = s.done;
+    $('statTodo').textContent = s.todo;
+    var units = s.docs * s.languages;
+    $('totalUnits').textContent = units;
+    $('totalDone').textContent = s.done;
+    $('totalPct').textContent = (s.done / units * 100).toFixed(1) + '%';
+    $('barDone').style.width = (s.done / units * 100) + '%';
+    $('barProgress').style.width = (s.progress / units * 100) + '%';
+    $('barTodo').style.width = (s.todo / units * 100) + '%';
+  }
+
+  function renderLangChips() {
+    var box = $('langChips');
+    box.innerHTML = '';
+    var all = document.createElement('span');
+    all.className = 'chip' + (state.lang === 'all' ? ' on' : '');
+    all.textContent = '全部语种';
+    all.addEventListener('click', function () { state.lang = 'all'; refresh(); });
+    box.appendChild(all);
+    data.languages.forEach(function (l) {
+      var c = document.createElement('span');
+      c.className = 'chip' + (state.lang === l.code ? ' on' : '');
+      c.textContent = l.code + ' ' + l.label;
+      c.title = l.label;
+      c.addEventListener('click', function () { state.lang = l.code; refresh(); });
+      box.appendChild(c);
+    });
+  }
+
+  function renderStatusChips() {
+    document.querySelectorAll('#statusChips .chip').forEach(function (c) {
+      c.classList.toggle('on', c.getAttribute('data-s') === state.status);
+      c.addEventListener('click', function () {
+        state.status = c.getAttribute('data-s');
+        document.querySelectorAll('#statusChips .chip').forEach(function (x) {
+          x.classList.toggle('on', x.getAttribute('data-s') === state.status);
+        });
+        refresh();
+      });
+    });
+  }
+
+  function renderBatch() {
+    var box = $('batchGrid');
+    box.innerHTML = '';
+    var langs = data.languages.filter(function (l) { return l.code !== 'zh'; });
+    langs.forEach(function (l) {
+      var done = 0, total = 0;
+      data.docs.forEach(function (d) {
+        var n = parseInt(d.num, 10);
+        if (n >= CUR_START && n <= CUR_END) { total++; if (d.status[l.code] === 'done') done++; }
+      });
+      var pct = total ? (done / total * 100) : 0;
+      var row = document.createElement('div');
+      row.className = 'blang';
+      row.innerHTML =
+        '<span class="code">' + esc(l.code) + '</span>' +
+        '<span class="bline"><i style="width:' + pct + '%"></i></span>' +
+        '<span class="cnt"><b>' + done + '</b> / ' + total + '</span>';
+      box.appendChild(row);
+    });
+  }
+
+  function matchDoc(d) {
+    var n = parseInt(d.num, 10);
+    if (state.lang !== 'all') {
+      var s = d.status[state.lang];
+      if (state.status !== 'all' && s !== state.status) return false;
+      return true;
+    }
+    if (state.status !== 'all') {
+      var hit = Object.keys(d.status).some(function (k) { return d.status[k] === state.status; });
+      if (!hit) return false;
+    }
+    return true;
+  }
+
+  function matchSearch(d) {
+    if (!state.q) return true;
+    var q = state.q.toLowerCase();
+    return d.num.indexOf(q) >= 0 || d.title.toLowerCase().indexOf(q) >= 0;
+  }
+
+  function moduleProgress(docs, mod) {
+    var list = docs.filter(function (d) { var n = parseInt(d.num, 10); return n >= mod.start && n <= mod.end; });
+    var langs = data.languages.filter(function (l) { return l.code !== 'zh'; });
+    var total = list.length * langs.length, done = 0;
+    list.forEach(function (d) { langs.forEach(function (l) { if (d.status[l.code] === 'done') done++; }); });
+    return { total: total, done: done, pct: total ? (done / total * 100) : 0 };
+  }
+
+  function renderModules() {
+    var host = $('modules');
+    host.innerHTML = '';
+    var langs = data.languages;
+
+    data.modules.forEach(function (mod, mi) {
+      var isCur = mod.start === CUR_START && mod.end === CUR_END;
+      var sec = document.createElement('section');
+      sec.className = 'module' + (isCur ? '' : ' collapsed');
+      sec.dataset.mi = mi;
+
+      var mp = moduleProgress(data.docs, mod);
+      var head = document.createElement('div');
+      head.className = 'mtab';
+      head.innerHTML =
+        '<span class="arrow">▼</span>' +
+        '<span class="mname">' + esc(mod.key) + (isCur ? ' <span class="tag">当前批次</span>' : '') + '</span>' +
+        '<span class="mrange">' + String(mod.start).padStart(2, '0') + ' - ' + String(mod.end).padStart(2, '0') + '</span>' +
+        '<span class="mprog"><span class="ml"><i style="width:' + mp.pct + '%"></i></span><span><b class="d">' + mp.done + '</b> / ' + mp.total + '</span></span>';
+      head.addEventListener('click', function () { sec.classList.toggle('collapsed'); });
+      sec.appendChild(head);
+
+      var list = data.docs.filter(function (d) { var n = parseInt(d.num, 10); return n >= mod.start && n <= mod.end; });
+
+      var wrap = document.createElement('div');
+      wrap.className = 'tbl-wrap';
+      var th = '<thead><tr><th class="doc">编号</th><th class="doc">中文标题</th>';
+      langs.forEach(function (l) { th += '<th title="' + esc(l.label) + '">' + esc(l.code) + '</th>'; });
+      th += '</tr></thead>';
+      var rows = '';
+      list.forEach(function (d) {
+        var visible = matchDoc(d) && matchSearch(d);
+        rows += '<tr class="' + (visible ? '' : 'hide ') + (isCur ? 'cur' : '') + '" data-num="' + d.num + '">';
+        rows += '<td class="num">' + d.num + '</td>';
+        rows += '<td class="title" title="' + esc(d.title) + '">' + esc(d.title) + '</td>';
+        langs.forEach(function (l) {
+          var s = d.status[l.code];
+          var dim = state.lang !== 'all' && state.lang !== l.code ? ' dim' : '';
+          rows += '<td class="lang' + dim + '" title="' + esc(l.label + '：' + STATUS[s]) + '"><span class="dot ' + s + '"></span></td>';
+        });
+        rows += '</tr>';
+      });
+      wrap.innerHTML = '<table class="tbl">' + th + '<tbody>' + rows + '</tbody></table>';
+      sec.appendChild(wrap);
+
+      var leg = document.createElement('div');
+      leg.className = 'legend';
+      leg.innerHTML =
+        '<span><i class="dot done"></i>已完成</span>' +
+        '<span><i class="dot progress"></i>进行中</span>' +
+        '<span><i class="dot todo"></i>待翻译</span>';
+      sec.appendChild(leg);
+
+      host.appendChild(sec);
+    });
+  }
+
+  function refresh() {
+    renderModules();
+    var has = hostHasRows();
+    if (!has) {
+      var empty = document.createElement('div');
+      empty.className = 'empty';
+      empty.textContent = '没有匹配的文档，试试调整筛选条件';
+      $('modules').appendChild(empty);
+    }
+  }
+  function hostHasRows() {
+    return Array.prototype.some.call(document.querySelectorAll('#modules tr'), function (tr) { return !tr.classList.contains('hide'); });
+  }
+
+  function boot() {
+    fetch('./status.json', { cache: 'no-store' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (d) {
+        data = d;
+        renderMeta();
+        renderLangChips();
+        renderStatusChips();
+        renderBatch();
+        refresh();
+      })
+      .catch(function (err) {
+        $('modules').innerHTML =
+          '<div class="empty">无法加载 status.json：' + esc(err.message) + '<br/>请确认看板数据已生成（node scripts/gen-dashboard-status.mjs）且与页面同目录。</div>';
+      });
+  }
+
+  $('search').addEventListener('input', function (e) { state.q = e.target.value.trim(); refresh(); });
+  boot();
+})();
+</script>
+</body>
+</html>

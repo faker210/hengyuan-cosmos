@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>衡元宙 · 文明路线交互沙盘</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#101a2e; --panel2:#0e1729; --line:#1f2d47;
+    --txt:#dbe4f0; --mut:#8ba0bf; --dim:#5c7192;
+    --pred:#e05a4e; --pred-soft:rgba(224,90,78,.16);
+    --sym:#e8b54d; --sym-soft:rgba(232,181,77,.16);
+    --acc:#5cc8d8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--txt);
+    font-family:"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+    line-height:1.6; padding:18px 16px 40px;
+  }
+  .wrap{max-width:1180px;margin:0 auto}
+  header{text-align:center;margin-bottom:16px}
+  header h1{font-size:26px;letter-spacing:2px;color:#f0d9a8}
+  header h1 .mark{color:var(--sym)}
+  header p{color:var(--mut);font-size:13.5px;margin-top:6px}
+  .controls{
+    display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:center;
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:12px 16px;margin-bottom:16px;
+  }
+  button{
+    background:var(--panel2);color:var(--txt);border:1px solid var(--line);
+    border-radius:8px;padding:8px 18px;font-size:14px;cursor:pointer;
+    transition:all .15s ease;
+  }
+  button:hover{border-color:var(--sym);color:#f0d9a8}
+  button.primary{background:linear-gradient(135deg,#c98a1b,#e8b54d);color:#14100a;border-color:#e8b54d;font-weight:700}
+  button.primary:hover{filter:brightness(1.08)}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  .ctl-group{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)}
+  .ctl-group input[type=range]{width:110px;accent-color:var(--sym)}
+  .ctl-group label{white-space:nowrap}
+  .toggle{display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
+  .toggle input{display:none}
+  .toggle .sw{width:34px;height:18px;border-radius:20px;background:#26334d;position:relative;transition:background .15s}
+  .toggle .sw::after{content:'';position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#8ba0bf;transition:all .15s}
+  .toggle input:checked + .sw{background:var(--sym)}
+  .toggle input:checked + .sw::after{left:18px;background:#14100a}
+  .grid{display:grid;grid-template-columns:300px 1fr;gap:16px}
+  @media(max-width:920px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .panel h2{font-size:14px;letter-spacing:1px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .panel h2 .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .dot.pred{background:var(--pred)} .dot.sym{background:var(--sym)}
+  .params{display:flex;flex-direction:column;gap:11px}
+  .param .row{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mut);margin-bottom:2px}
+  .param .row b{color:var(--txt);font-weight:600}
+  .param input[type=range]{width:100%;accent-color:var(--acc);height:4px;cursor:pointer}
+  .param .val{color:var(--acc);font-variant-numeric:tabular-nums}
+  .chart-card{margin-bottom:16px}
+  .chart-card h3{font-size:13.5px;color:var(--mut);margin-bottom:6px;font-weight:500}
+  .chart-card h3 b{color:var(--txt)}
+  svg{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px;background:var(--panel2)}
+  .legend{display:flex;gap:18px;font-size:12.5px;color:var(--mut);margin-top:6px;flex-wrap:wrap}
+  .legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
+  .legend .l-pred i{background:var(--pred)} .legend .l-sym i{background:var(--sym)}
+  .legend .l-line i{background:transparent;border-top:1.5px dashed var(--mut)}
+  .bottom{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  @media(max-width:920px){.bottom{grid-template-columns:1fr}}
+  .bar-row{margin-bottom:13px}
+  .bar-row .lab{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mut);margin-bottom:4px}
+  .bar-track{height:16px;border-radius:8px;background:#182338;position:relative;overflow:hidden}
+  .bar-fill{height:100%;border-radius:8px;transition:width .4s ease}
+  .bar-cap{position:absolute;top:-2px;bottom:-2px;width:2px;background:#5cc8d8;opacity:.85}
+  .verdict{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--panel)}
+  .verdict h3{font-size:15px;margin-bottom:10px;color:#f0d9a8;letter-spacing:1px}
+  .verdict .v-line{font-size:13.5px;line-height:2;border-left:3px solid var(--sym);padding-left:12px;color:var(--txt)}
+  .verdict .v-line.pred{border-left-color:var(--pred)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-align:center}
+  .stat .n{display:block;font-size:19px;font-weight:700;color:var(--sym);font-variant-numeric:tabular-nums}
+  .stat .n.p{color:var(--pred)}
+  .stat .c{font-size:11.5px;color:var(--mut);margin-top:2px}
+  details{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+  summary{cursor:pointer;color:var(--mut);font-size:13.5px;user-select:none}
+  details[open] summary{margin-bottom:10px;color:var(--txt)}
+  details p,details li{font-size:13px;color:var(--mut);line-height:1.9}
+  details ul{padding-left:20px}
+  .flash{animation:flash .5s ease}
+  @keyframes flash{0%{background:rgba(232,181,77,.25)}100%{background:transparent}}
+  .axis-label{font-size:11px;fill:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1><span class="mark">衡元宙</span> · 文明路线交互沙盘</h1>
+    <p>掠夺型文明 × 锚点共生文明 —— 成长曲线 · 资源逻辑 · 文明上限 可视化对比（纯前端推演，数据基于《00 宇宙总览》《04 反掠夺主义论纲》设定）</p>
+  </header>
+
+  <div class="controls">
+    <button id="btnPlay" class="primary">▶ 开始推演</button>
+    <button id="btnReset">↺ 重置</button>
+    <div class="ctl-group">
+      <label>推演速度</label>
+      <input type="range" id="speed" min="0.5" max="8" step="0.5" value="2">
+      <span id="speedVal">2×</span>
+    </div>
+    <label class="toggle">
+      <input type="checkbox" id="activation" checked>
+      <span class="sw"></span>
+      <span>20% 激活战略（第 35 纪元起骨干带动）</span>
+    </label>
+  </div>
+
+  <div class="grid">
+
+    <!-- 参数面板 -->
+    <div class="col-params">
+      <div class="panel" style="margin-bottom:16px">
+        <h2><span class="dot pred"></span>掠夺型文明参数</h2>
+        <div class="params">
+          <div class="param">
+            <div class="row"><span>掠夺强度（资源消耗率）</span><b>0.16</b></div>
+            <input type="range" id="pStrength" min="0.05" max="0.50" step="0.01" value="0.16">
+          </div>
+          <div class="param">
+            <div class="row"><span>掠夺增速（早期成长）</span><b>0.16</b></div>
+            <input type="range" id="pGrowth" min="0.05" max="0.30" step="0.01" value="0.16">
+          </div>
+          <div class="param">
+            <div class="row"><span>内部冲突（内耗系数）</span><b>0.025</b></div>
+            <input type="range" id="pConflict" min="0" max="0.08" step="0.005" value="0.025">
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2><span class="dot sym"></span>锚点共生文明参数</h2>
+        <div class="params">
+          <div class="param">
+            <div class="row"><span>共生增速（体系开放）</span><b>0.055</b></div>
+            <input type="range" id="sGrowth" min="0.03" max="0.12" step="0.005" value="0.055">
+          </div>
+          <div class="param">
+            <div class="row"><span>协同系数（万族协作）</span><b>0.60</b></div>
+            <input type="range" id="sCoop" min="0.10" max="1.00" step="0.05" value="0.60">
+          </div>
+          <div class="param">
+            <div class="row"><span>资源再生（循环恢复）</span><b>0.07</b></div>
+            <input type="range" id="sRegen" min="0.02" max="0.15" step="0.01" value="0.07">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 图表区 -->
+    <div class="col-charts">
+      <div class="chart-card">
+        <h3><b>成长曲线</b> —— 文明总量（总能量 / 进化位阶）随纪元变化</h3>
+        <svg id="chartGrowth" viewBox="0 0 640 260" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="legend">
+          <span class="l-pred"><i></i>掠夺型文明</span>
+          <span class="l-sym"><i></i>锚点共生文明</span>
+          <span class="l-line"><i></i>熵增崩塌 / 升维节点</span>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h3><b>资源存量</b> —— 各自宇宙的可用本源资源（R₀ = 100）</h3>
+        <svg id="chartRes" viewBox="0 0 640 260" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="legend">
+          <span class="l-pred"><i></i>掠夺型宇宙（涸泽而渔）</span>
+          <span class="l-sym"><i></i>共生型宇宙（循环再生）</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <div class="panel">
+      <h2>文明上限对比</h2>
+      <div class="bar-row">
+        <div class="lab"><span>掠夺型文明 · 实际到达 / 理论上限</span><span id="capPLab">—</span></div>
+        <div class="bar-track" id="capPTrack"><div class="bar-fill" id="capP" style="width:0%;background:linear-gradient(90deg,#8a332c,#e05a4e)"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="lab"><span>锚点共生文明 · 实际到达 / 理论上限</span><span id="capSLab">—</span></div>
+        <div class="bar-track" id="capSTrack"><div class="bar-fill" id="capS" style="width:0%;background:linear-gradient(90deg,#8a6a1c,#e8b54d)"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="lab"><span>资源可持续指数（终值 / 100）</span><span id="susPLab">—</span></div>
+        <div class="bar-track" id="susPTrack"><div class="bar-fill" id="susP" style="width:0%;background:var(--pred)"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="lab"><span>资源可持续指数（终值 / 100）</span><span id="susSLab">—</span></div>
+        <div class="bar-track" id="susSTrack"><div class="bar-fill" id="susS" style="width:0%;background:var(--sym)"></div></div>
+      </div>
+      <p style="font-size:12px;color:var(--dim);margin-top:8px">上限刻度：位面级（1.0）→ 宇宙级（2.4）→ 星际共生（3.4）。共生文明每完成一次集体升维，文明层级向上跨越一档。</p>
+    </div>
+
+    <div class="verdict">
+      <h3>推演结算 · 文明结局</h3>
+      <div class="v-line pred" id="verdictP">—</div>
+      <div class="v-line" id="verdictS" style="margin-top:10px">—</div>
+      <div class="stats">
+        <div class="stat"><span class="n p" id="stPeakP">—</span><span class="c">掠夺型 · 峰值文明总量</span></div>
+        <div class="stat"><span class="n" id="stPeakS">—</span><span class="c">共生型 · 峰值文明总量</span></div>
+        <div class="stat"><span class="n" id="stAsc">—</span><span class="c">共生型 · 升维次数</span></div>
+        <div class="stat"><span class="n p" id="stCollapse">—</span><span class="c">掠夺型 · 崩塌纪元</span></div>
+        <div class="stat"><span class="n" id="stResP">—</span><span class="c">掠夺型 · 资源终值</span></div>
+        <div class="stat"><span class="n" id="stResS">—</span><span class="c">共生型 · 资源终值</span></div>
+      </div>
+    </div>
+  </div>
+
+  <details>
+    <summary>模型说明（点击展开）</summary>
+    <ul>
+      <li><b>推演框架</b>：确定性欧拉步进，共 120 纪元 × 0.25 步长。两侧文明各自运行于独立宇宙，参数由左侧滑杆实时控制，任意修改即刻重算。</li>
+      <li><b>掠夺型模型</b>：成长率 = 掠夺增速 ×（资源存量/100）− 内耗 − 维护成本；资源只出不进（消耗率 × 文明总量），55% 被消耗资源以熵增形式逸散；资源跌破 15 触发「熵增崩塌」，文明总量进入不可逆衰减（文明断层）。</li>
+      <li><b>共生型模型</b>：成长遵循 Logistic 曲线，文明上限随「升维」逐级抬升（现实筑基 → 科技赋能 → 意识进化 → 星际共生）；资源 = 低消耗 + 再生项 d·R·(1−R/Rmax)，形成自循环；开启「20% 激活战略」后第 35 纪元起成长率 ×1.5（骨干带动八成众生）。</li>
+      <li><b>设定依据</b>：成长与资源逻辑对应《00-衡元宙宇宙总览》（可进化性、四层级）、《04-反掠夺主义核心论纲》（掠夺三重谬误、效率天花板）、《23-20%激活战略规划》、《25-共生反馈循环机制》。</li>
+      <li><b>免责</b>：本沙盘为世界观思想实验的可视化推演工具，参数为演示性取值，不构成设定定论。</li>
+    </ul>
+  </details>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============ 参数 ============ */
+  var T = 120;            // 总纪元
+  var DT = 0.25;          // 步长
+  var STEPS = Math.round(T / DT);
+  var R0 = 100, RMAX = 120;
+
+  function readParams() {
+    return {
+      pStrength: parseFloat(document.getElementById('pStrength').value),
+      pGrowth: parseFloat(document.getElementById('pGrowth').value),
+      pConflict: parseFloat(document.getElementById('pConflict').value),
+      sGrowth: parseFloat(document.getElementById('sGrowth').value),
+      sCoop: parseFloat(document.getElementById('sCoop').value),
+      sRegen: parseFloat(document.getElementById('sRegen').value),
+      activation: document.getElementById('activation').checked
+    };
+  }
+
+  function fmt(v, d) {
+    d = d == null ? 1 : d;
+    return v.toFixed(d);
+  }
+
+  /* ============ 推演模型（确定性） ============ */
+  function compute(par) {
+    var eP = 2, rP = R0, peakP = 2, peakPt = 0, collapsed = false, collapseT = null, entP = 0;
+    var eS = 2, rS = R0, peakS = 2, C = 60, asc = 0, ascTimes = [];
+    var seriesP = [], seriesRP = [], seriesS = [], seriesRS = [], seriesC = [];
+
+    for (var i = 0; i <= STEPS; i++) {
+      var t = i * DT;
+      seriesP.push(eP); seriesRP.push(rP); seriesS.push(eS); seriesRS.push(rS); seriesC.push(C);
+
+      /* —— 掠夺型 —— */
+      if (!collapsed) {
+        var growthP = par.pGrowth * (rP / R0) - par.pConflict * (eP / 60) - 0.012;
+        eP += eP * Math.max(-0.5, growthP) * DT;
+        var cons = par.pStrength * eP;
+        rP -= cons * DT;
+        entP += cons * 0.55 * DT;
+        if (rP <= 15) { collapsed = true; collapseT = t; }
+        if (rP < 0) rP = 0;
+      } else {
+        eP += eP * -0.22 * DT;   // 熵增崩塌：不可逆衰减
+      }
+      if (eP < 0.01) eP = 0.01;
+      if (eP > peakP) { peakP = eP; peakPt = t; }
+
+      /* —— 共生型 —— */
+      var act = (par.activation && t >= 35) ? 1.5 : 1;
+      var rEff = par.sGrowth * (1 + par.sCoop * 0.8) * act;
+      eS += eS * rEff * Math.max(0, 1 - eS / C) * DT;
+      if (eS >= 0.82 * C && asc < 4) { C *= 2.2; asc++; ascTimes.push(t); }
+      rS += (-0.018 * eS + par.sRegen * rS * (1 - rS / RMAX)) * DT;
+      if (rS < 0) rS = 0;
+      if (rS > RMAX) rS = RMAX;
+      if (eS > peakS) peakS = eS;
+    }
+
+    return {
+      seriesP: seriesP, seriesRP: seriesRP,
+      seriesS: seriesS, seriesRS: seriesRS, seriesC: seriesC,
+      peakP: peakP, peakPt: peakPt, collapseT: collapseT,
+      peakS: peakS, asc: asc, ascTimes: ascTimes,
+      entRate: entP / T,
+      finalRP: seriesRP[seriesRP.length - 1],
+      finalRS: seriesRS[seriesRS.length - 1],
+      finalP: seriesP[seriesP.length - 1],
+      finalS: seriesS[seriesS.length - 1]
+    };
+  }
+
+  /* ============ SVG 绘图 ============ */
+  var W = 640, H = 260, PADL = 46, PADR = 14, PADT = 16, PADB = 26;
+
+  function xy(v, maxV, i, n) {
+    var x = PADL + (i / n) * (W - PADL - PADR);
+    var y = H - PADB - (v / maxV) * (H - PADT - PADB);
+    return [x, y];
+  }
+
+  function polyline(points) {
+    return points.map(function (p) { return p[0].toFixed(1) + ',' + p[1].toFixed(1); }).join(' ');
+  }
+
+  function drawChart(svg, seriesList, opts) {
+    // seriesList: [{data, color, width, dash, area}]
+    var n = opts.n || STEPS;
+    var maxV = opts.maxV || 1;
+    var inner = '';
+    var i;
+
+    // 网格与 Y 轴刻度
+    var ticks = 4;
+    for (i = 0; i <= ticks; i++) {
+      var v = maxV * i / ticks;
+      var p = xy(v, maxV, 0, n);
+      inner += '<line x1="' + p[0] + '" y1="' + p[1] + '" x2="' + (W - PADR) + '" y2="' + p[1] + '" stroke="#1b2942" stroke-width="1"/>';
+      inner += '<text x="' + (PADL - 8) + '" y="' + (p[1] + 4) + '" text-anchor="end" class="axis-label">' + fmt(v, v >= 100 ? 0 : 1) + '</text>';
+    }
+    // X 轴刻度
+    for (i = 0; i <= 4; i++) {
+      var tv = Math.round(opts.maxT * i / 4);
+      var tp = xy(0, maxV, i / 4 * n, n);
+      inner += '<text x="' + tp[0] + '" y="' + (H - 8) + '" text-anchor="middle" class="axis-label">' + tv + '</text>';
+    }
+    inner += '<text x="' + (W / 2) + '" y="' + (H - 4) + '" text-anchor="middle" class="axis-label">纪元</text>';
+
+    // 面积（可选）
+    seriesList.forEach(function (s) {
+      if (!s.area) return;
+      var pts = [];
+      for (i = 0; i <= n; i++) pts.push(xy(s.data[i], maxV, i, n));
+      var d = 'M ' + pts[0][0].toFixed(1) + ' ' + (H - PADB) + ' L ' + pts.map(function (p) { return p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' L ') + ' L ' + pts[pts.length - 1][0].toFixed(1) + ' ' + (H - PADB) + ' Z';
+      inner += '<path d="' + d + '" fill="' + s.area + '"/>';
+    });
+
+    // 折线
+    seriesList.forEach(function (s) {
+      var pts = [];
+      for (i = 0; i <= n; i++) pts.push(xy(s.data[i], maxV, i, n));
+      inner += '<polyline points="' + polyline(pts) + '" fill="none" stroke="' + s.color + '" stroke-width="' + (s.width || 2.2) + '" stroke-dasharray="' + (s.dash || '') + '" stroke-linejoin="round"/>';
+    });
+
+    // 标记：崩塌线 / 升维点
+    (opts.markers || []).forEach(function (m) {
+      if (m.t == null) return;
+      var i0 = Math.min(Math.round(m.t / DT), n);
+      var p = xy(0, maxV, i0, n);
+      if (m.kind === 'vline') {
+        inner += '<line x1="' + p[0] + '" y1="' + PADT + '" x2="' + p[0] + '" y2="' + (H - PADB) + '" stroke="' + m.color + '" stroke-width="1.4" stroke-dasharray="5 4"/>';
+        inner += '<text x="' + p[0] + '" y="' + (PADT + 12) + '" text-anchor="middle" class="axis-label" fill="' + m.color + '">' + m.label + '</text>';
+      } else if (m.kind === 'dot') {
+        inner += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4.5" fill="' + m.color + '" stroke="#0b1220" stroke-width="1.5"/>';
+      }
+    });
+
+    svg.innerHTML = inner;
+  }
+
+  /* ============ 渲染 ============ */
+  var model = null;
+
+  function render(upTo) {
+    var par = readParams();
+    model = compute(par);
+    var n = upTo == null ? STEPS : upTo;
+    var maxE = Math.max(model.peakP, model.peakS, 1) * 1.08;
+    var maxR = RMAX * 1.02;
+
+    drawChart(document.getElementById('chartGrowth'),
+      [
+        { data: model.seriesP, color: '#e05a4e' },
+        { data: model.seriesS, color: '#e8b54d', area: 'rgba(232,181,77,.06)' }
+      ],
+      {
+        n: n, maxV: maxE, maxT: T,
+        markers: [
+          { kind: 'vline', t: model.collapseT, color: '#e05a4e', label: '熵增崩塌' },
+          { kind: 'dot', t: model.ascTimes[0], color: '#5cc8d8' },
+          { kind: 'dot', t: model.ascTimes[1], color: '#5cc8d8' },
+          { kind: 'dot', t: model.ascTimes[2], color: '#5cc8d8' },
+          { kind: 'dot', t: model.ascTimes[3], color: '#5cc8d8' }
+        ]
+      }
+    );
+
+    drawChart(document.getElementById('chartRes'),
+      [
+        { data: model.seriesRP, color: '#e05a4e', width: 1.8 },
+        { data: model.seriesRS, color: '#e8b54d', width: 2.2, area: 'rgba(232,181,77,.05)' }
+      ],
+      { n: n, maxV: maxR, maxT: T }
+    );
+
+    updateBarsAndVerdict(par);
+  }
+
+  function pct(v, cap) { return Math.max(0, Math.min(100, v / cap * 100)); }
+
+  function updateBarsAndVerdict(par) {
+    var m = model;
+    /* 文明上限：刻度 3.4 */
+    var capScale = 3.4;
+    var capP = Math.min(1.0, 0.5 + m.peakP / 60);
+    var capS = Math.min(3.4, 1.3 + m.asc * 0.62);
+    document.getElementById('capP').style.width = pct(capP, capScale) + '%';
+    document.getElementById('capPLab').textContent = fmt(capP, 2) + ' / 1.0（位面级）';
+    document.getElementById('capS').style.width = pct(capS, capScale) + '%';
+    document.getElementById('capSLab').textContent = fmt(capS, 2) + ' / 3.4（星际共生）';
+
+    var susP = Math.max(0, m.finalRP / R0);
+    var susS = Math.max(0, m.finalRS / R0);
+    document.getElementById('susP').style.width = pct(susP, 1) + '%';
+    document.getElementById('susPLab').textContent = fmt(susP * 100, 0) + ' / 100';
+    document.getElementById('susS').style.width = pct(susS, 1) + '%';
+    document.getElementById('susSLab').textContent = fmt(susS * 100, 0) + ' / 100';
+
+    /* 关键指标 */
+    document.getElementById('stPeakP').textContent = fmt(m.peakP, 0);
+    document.getElementById('stPeakS').textContent = fmt(m.peakS, 0);
+    document.getElementById('stAsc').textContent = m.asc + ' 次';
+    document.getElementById('stCollapse').textContent = m.collapseT == null ? '未崩塌' : fmt(m.collapseT, 0) + ' 纪元';
+    document.getElementById('stResP').textContent = fmt(m.finalRP, 0) + ' / 100';
+    document.getElementById('stResS').textContent = fmt(m.finalRS, 0) + ' / 100';
+
+    /* 结算 */
+    var vP = document.getElementById('verdictP');
+    if (m.collapseT != null) {
+      vP.textContent = '掠夺型文明 · 结局：熵增崩塌、文明断层。第 ' + fmt(m.collapseT, 0) + ' 纪元资源跌破临界（15/100），此前峰值文明总量 ' + fmt(m.peakP, 0) + '，终值仅剩 ' + fmt(m.finalP, 0) + '；消耗的 ' + fmt(m.entRate * 100, 0) + '% 本源化作熵，永不可逆。';
+    } else {
+      vP.textContent = '掠夺型文明 · 结局：短期繁荣，但资源已降至 ' + fmt(m.finalRP, 0) + '/100，枯竭与崩塌只是时间问题。';
+    }
+    var stages = ['现实筑基', '科技赋能', '意识进化', '星际共生'];
+    var vS = document.getElementById('verdictS');
+    if (m.asc >= 3) {
+      vS.textContent = '锚点共生文明 · 结局：完成 ' + m.asc + ' 次集体升维（' + stages.slice(0, m.asc).join(' → ') + '），峰值文明总量 ' + fmt(m.peakS, 0) + '，资源自循环维持在 ' + fmt(m.finalRS, 0) + '/100 —— 文明与宇宙同步上行，升维之路无上限。';
+    } else if (m.asc > 0) {
+      vS.textContent = '锚点共生文明 · 结局：完成 ' + m.asc + ' 次升维（' + stages.slice(0, m.asc).join(' → ') + '），仍在成长中；资源 ' + fmt(m.finalRS, 0) + '/100 高位自循环，无崩塌风险。';
+    } else {
+      vS.textContent = '锚点共生文明 · 结局：处于' + stages[0] + '阶段，稳步积累中；资源 ' + fmt(m.finalRS, 0) + '/100。';
+    }
+  }
+
+  /* ============ 动画推演 ============ */
+  var playing = false, frame = 0, rafId = null;
+
+  function step() {
+    if (!playing) return;
+    var speed = parseFloat(document.getElementById('speed').value);
+    frame += speed * 2;
+    if (frame >= STEPS) { frame = STEPS; stop(true); }
+    render(Math.round(frame));
+    rafId = requestAnimationFrame(step);
+  }
+
+  function play() {
+    if (playing) return;
+    playing = true;
+    document.getElementById('btnPlay').textContent = '⏸ 暂停';
+    rafId = requestAnimationFrame(step);
+  }
+
+  function stop(done) {
+    playing = false;
+    document.getElementById('btnPlay').textContent = '▶ 继续推演';
+    if (done) document.getElementById('btnPlay').textContent = '▶ 重新推演';
+    if (rafId) cancelAnimationFrame(rafId);
+  }
+
+  function reset() {
+    stop(false);
+    frame = 0;
+    render(STEPS);
+    document.getElementById('btnPlay').textContent = '▶ 开始推演';
+  }
+
+  /* ============ 事件绑定 ============ */
+  document.getElementById('btnPlay').addEventListener('click', function () {
+    if (playing) { stop(false); return; }
+    if (frame >= STEPS) { frame = 0; }
+    play();
+  });
+  document.getElementById('btnReset').addEventListener('click', reset);
+
+  ['pStrength', 'pGrowth', 'pConflict', 'sGrowth', 'sCoop', 'sRegen'].forEach(function (id) {
+    var el = document.getElementById(id);
+    var label = el.parentNode.querySelector('.row b');
+    el.addEventListener('input', function () {
+      var v = parseFloat(el.value);
+      if (label) label.textContent = (el.step.indexOf('.') >= 0 ? v.toFixed(3) : v.toFixed(0)).replace(/0+$/, '').replace(/\.$/, '');
+      if (!playing) render(STEPS);
+    });
+  });
+
+  var speedEl = document.getElementById('speed');
+  var speedVal = document.getElementById('speedVal');
+  speedEl.addEventListener('input', function () {
+    speedVal.textContent = speedEl.value + '×';
+  });
+
+  document.getElementById('activation').addEventListener('change', function () {
+    if (!playing) render(STEPS);
+  });
+
+  /* 初始渲染 */
+  render(STEPS);
+})();
+</script>
+</body>
+</html>
