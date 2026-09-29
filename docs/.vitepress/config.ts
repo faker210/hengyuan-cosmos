@@ -211,7 +211,8 @@ function buildSidebar(lang: string) {
       .map((f) => {
         const name = f.replace(/\.md$/, '')
         const fallback = name.replace(/^\d{4}[_-]/, '')
-        return { text: fallback, link: `/${lang}/${name}.html` }
+        const text = extractDocTitle(path.join(dir, f), fallback)
+        return { text, link: `/${lang}/${name}.html` }
       })
     if (!items.length) continue
     groups.push({
